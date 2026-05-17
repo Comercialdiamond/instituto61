@@ -1,0 +1,18 @@
+AJUSTE V17 - HOME + DOAÇÃO
+
+Substitua estes arquivos na sua pasta atual:
+
+1) index.html
+2) doacao.html
+3) assets/css/style.css
+4) assets/js/main.js
+5) assets/js/layout.js
+6) assets/img/pix-qrcode-instituto61.png
+
+O que foi corrigido:
+- Na página Doação, o título ficou no padrão visual do print enviado: grande, centralizado e proporcional.
+- A área Pix continua chamativa, com QR Code, dados e cards de impacto.
+- Na Home, removi o 'visible' fixo das seções para restaurar o efeito de movimento/reveal ao rolar a página.
+
+Lembrete: em assets/js/layout.js, trocar o número do WhatsApp em:
+const WHATSAPP_NUMBER = "5561000000000";

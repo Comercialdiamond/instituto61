@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detalhes do parceiro | Instituto 61</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header class="site-header" id="site-header"></header>
+
+  <main>
+    <section class="page-hero page-hero-clean page-hero-no-label partner-detail-hero">
+      <div class="container">
+        <div class="partner-detail-heading" id="partner-detail-heading"></div>
+      </div>
+    </section>
+
+    <section class="section partner-detail-section">
+      <div class="container">
+        <div class="partner-detail-layout">
+          <aside class="partner-detail-card card reveal" id="partner-detail-card"></aside>
+
+          <div class="partner-projects reveal">
+            <h2 class="title-lg">Projetos e andamento</h2>
+            <p class="lead">Acompanhe os projetos relacionados a este parceiro e o estágio atual de cada iniciativa.</p>
+            <div class="partner-project-list" id="partner-project-list"></div>
+          </div>
+        </div>
+
+        <div class="center" style="margin-top:42px">
+          <a class="btn btn-dark" href="parceiros.html">Voltar para parceiros</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="site-footer"></footer>
+
+  <script src="assets/js/layout.js"></script>
+  <script src="assets/js/parceiros.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>renderParceiroDetalhes(); setupReveal();</script>
+</body>
+</html>

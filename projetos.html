@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projetos | Instituto 61</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header class="site-header" id="site-header"></header>
+
+  <main>
+    <section class="page-hero page-hero-clean page-hero-no-label projects-hero">
+      <div class="container">
+        <h1 class="title-xl page-title-centered">Projetos que conectam cuidado, cidadania e <span>oportunidades.</span></h1>
+        <p class="lead page-lead-justified">Conheça iniciativas do Instituto 61 voltadas à educação, saúde, proteção social, cultura, lazer e fortalecimento comunitário.</p>
+      </div>
+    </section>
+
+    <section class="section projects-section">
+      <div class="container">
+        <div class="filters reveal">
+          <button class="filter-btn active" data-filter="todos">Todos</button>
+          <button class="filter-btn" data-filter="educacao">Educação</button>
+          <button class="filter-btn" data-filter="saude">Saúde</button>
+          <button class="filter-btn" data-filter="protecao">Proteção social</button>
+          <button class="filter-btn" data-filter="cultura">Cultura e lazer</button>
+        </div>
+
+        <div class="grid-3 projects-grid-modern" id="projetos-grid"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="site-footer"></footer>
+
+  <div class="modal" id="project-modal">
+    <div class="modal-content project-modal-content" id="project-modal-body"></div>
+  </div>
+
+  <script src="assets/js/layout.js"></script>
+  <script src="assets/js/projetos.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>renderProjetos(); setupProjectFilters(); setupReveal();</script>
+</body>
+</html>
