@@ -1,0 +1,2162 @@
+/* =========================================================
+   Instituto 61 - Site Institucional Moderno V2
+   Identidade visual ajustada com base nos arquivos enviados:
+   Teal + Laranja + Branco, formas orgânicas e linguagem humana.
+   ========================================================= */
+
+:root {
+  --brand-teal: #1a8d9e;
+  --brand-teal-dark: #0f7885;
+  --brand-teal-deep: #075f6a;
+  --brand-teal-soft: #e5f7f8;
+  --brand-orange: #f8af56;
+  --brand-orange-2: #f4a04a;
+  --brand-orange-soft: #fff2df;
+  --texto: #23313d;
+  --muted: #667085;
+  --white: #ffffff;
+  --offwhite: #fbfcfd;
+  --line: #e6edf0;
+  --shadow: 0 24px 70px rgba(7, 95, 106, .14);
+  --shadow-soft: 0 10px 30px rgba(7, 95, 106, .08);
+  --radius: 30px;
+  --container: 1180px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Montserrat', Arial, sans-serif;
+  color: var(--texto);
+  background: var(--white);
+  line-height: 1.65;
+  overflow-x: hidden;
+}
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; display: block; }
+button { font-family: inherit; }
+
+.container { width: min(100% - 40px, var(--container)); margin: 0 auto; }
+.section { padding: 92px 0; position: relative; }
+.section-soft { background: var(--offwhite); }
+.section-teal { background: var(--brand-teal); color: var(--white); overflow: hidden; }
+.section-cream { background: var(--brand-orange-soft); }
+.center { text-align: center; }
+.center .lead { margin-left: auto; margin-right: auto; }
+
+/* Formas orgânicas da identidade */
+.blob-bg { position: relative; overflow: hidden; }
+.blob-bg::before,
+.blob-bg::after {
+  content: "";
+  position: absolute;
+  border-radius: 999px;
+  background: var(--brand-orange);
+  opacity: .95;
+  pointer-events: none;
+}
+.blob-bg::before { width: 360px; height: 360px; top: -210px; left: -110px; }
+.blob-bg::after { width: 420px; height: 420px; right: -180px; bottom: -240px; }
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: rgba(248, 175, 86, .18);
+  color: var(--brand-teal-deep);
+  font-weight: 900;
+  font-size: .84rem;
+  margin-bottom: 18px;
+}
+.section-teal .eyebrow,
+.hero .eyebrow,
+.page-hero .eyebrow,
+.cta .eyebrow,
+.ubuntu-box .eyebrow {
+  background: rgba(255,255,255,.14);
+  color: var(--white);
+}
+.eyebrow::before {
+  content: "";
+  width: 8px; height: 8px; border-radius: 50%;
+  background: var(--brand-orange);
+}
+
+.title-xl {
+  font-size: clamp(2.5rem, 6vw, 5.35rem);
+  line-height: .98;
+  letter-spacing: -.07em;
+}
+.title-lg {
+  font-size: clamp(2rem, 4vw, 3.35rem);
+  line-height: 1.08;
+  letter-spacing: -.045em;
+  color: var(--brand-teal-deep);
+}
+.section-teal .title-lg,
+.cta .title-lg,
+.ubuntu-box .title-lg { color: var(--white); }
+.lead {
+  color: var(--muted);
+  font-size: 1.08rem;
+  max-width: 780px;
+  margin-top: 16px;
+}
+.section-teal .lead,
+.hero .lead,
+.page-hero .lead,
+.cta p,
+.ubuntu-box p { color: rgba(255,255,255,.86); }
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 50px;
+  padding: 0 23px;
+  border-radius: 999px;
+  font-weight: 900;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: .22s ease;
+}
+.btn:hover { transform: translateY(-2px); }
+.btn-primary {
+  color: var(--white);
+  background: var(--brand-orange);
+  box-shadow: 0 14px 30px rgba(248,175,86,.34);
+}
+.btn-dark { color: var(--white); background: var(--brand-teal-deep); }
+.btn-outline { color: var(--brand-teal-deep); background: var(--white); border-color: var(--line); }
+.btn-light { color: var(--white); border-color: rgba(255,255,255,.35); background: rgba(255,255,255,.12); backdrop-filter: blur(12px); }
+.btn-primary:hover { background: var(--brand-orange-2); }
+
+/* Header */
+.site-header {
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: 1000;
+  background: rgba(255,255,255,.92);
+  border-bottom: 1px solid rgba(230,237,240,.86);
+  backdrop-filter: blur(18px);
+  transition: box-shadow .22s ease;
+}
+.site-header.scrolled { box-shadow: 0 10px 30px rgba(7,95,106,.08); }
+.nav { height: 82px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+.logo { display: inline-flex; align-items: center; color: var(--brand-teal-deep); font-weight: 900; min-width: 170px; }
+.logo img { width: 162px; max-height: 62px; object-fit: contain; }
+.logo-footer img { width: 190px; max-height: 82px; object-fit: contain; }
+.nav-menu { display: flex; align-items: center; gap: 24px; list-style: none; font-weight: 800; color: var(--muted); font-size: .94rem; }
+.nav-menu a.active, .nav-menu a:hover { color: var(--brand-teal); }
+.mobile-toggle { display: none; width: 44px; height: 44px; border: 1px solid var(--line); border-radius: 14px; background: white; cursor: pointer; }
+.mobile-toggle span { display: block; width: 20px; height: 2px; background: var(--brand-teal-deep); margin: 5px auto; border-radius: 99px; }
+
+/* Hero */
+.hero {
+  min-height: 94vh;
+  padding: 148px 0 88px;
+  color: white;
+  background:
+    radial-gradient(circle at 88% 17%, rgba(248,175,86,.70), transparent 19%),
+    radial-gradient(circle at 4% 88%, rgba(248,175,86,.42), transparent 24%),
+    linear-gradient(135deg, var(--brand-teal-deep), var(--brand-teal) 58%, var(--brand-teal-dark));
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content:""; position:absolute; inset:0;
+  background-image: linear-gradient(rgba(255,255,255,.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.05) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: linear-gradient(to bottom, #000, transparent 92%);
+}
+.hero-grid { position: relative; z-index: 2; display: grid; grid-template-columns: .96fr 1.04fr; gap: 56px; align-items: center; }
+.hero .title-xl span { color: var(--brand-orange); }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 32px; }
+.hero-brand { margin-bottom: 26px; }
+.hero-brand img { width: min(360px, 75vw); filter: drop-shadow(0 16px 24px rgba(0,0,0,.15)); }
+.hero-card-stack { position: relative; min-height: 530px; }
+.visual-card { position: absolute; border-radius: 38px; border: 1px solid rgba(255,255,255,.18); overflow: hidden; box-shadow: 0 34px 90px rgba(0,0,0,.24); background: rgba(255,255,255,.09); backdrop-filter: blur(14px); }
+.visual-card.main {
+  right: 0; top: 18px; width: 92%; height: 470px;
+  background: url("../img/hero-instituto61.png") center/cover;
+}
+.visual-card.side {
+  left: 0; bottom: 22px; width: 52%; height: 190px;
+  background: url("../img/logo-instituto61-white.png") center/contain no-repeat, rgba(26,141,158,.94);
+}
+.glass-note { position:absolute; right:28px; bottom:45px; width:295px; padding:24px; border-radius:28px; background: rgba(255,255,255,.94); box-shadow: var(--shadow); color: var(--brand-teal-deep); }
+.glass-note strong { display:block; color: var(--brand-orange); font-size: 2rem; line-height:1; }
+
+/* Page hero */
+.page-hero { padding: 150px 0 78px; background: linear-gradient(135deg, var(--brand-teal-deep), var(--brand-teal)); color: white; position: relative; overflow: hidden; }
+.page-hero::after { content:""; position:absolute; width:420px; height:420px; border-radius:999px; background: var(--brand-orange); right:-160px; top:-190px; opacity:.95; }
+.page-hero .container { position: relative; z-index:2; }
+
+/* Cards e grids */
+.grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+.grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; }
+.card { background: white; border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow-soft); padding: 28px; transition: .22s ease; }
+.card:hover { transform: translateY(-5px); box-shadow: var(--shadow); }
+.icon { width: 58px; height: 58px; display: grid; place-items: center; border-radius: 19px; background: var(--brand-orange-soft); color: var(--brand-teal-deep); margin-bottom: 18px; font-size: 1.45rem; }
+.card h3 { color: var(--brand-teal-deep); font-size: 1.2rem; line-height: 1.2; margin-bottom: 10px; }
+.card p { color: var(--muted); }
+
+/* Separadores institucionais */
+.split { display: grid; grid-template-columns: .95fr 1.05fr; gap: 54px; align-items: center; }
+.photo-panel { min-height: 470px; border-radius: 38px; color: white; display:flex; align-items:flex-end; padding:34px; box-shadow: var(--shadow); background: linear-gradient(to top, rgba(7,95,106,.88), transparent 60%), url("../img/hero-instituto61-horizontal.png") center/cover; overflow:hidden; }
+.photo-panel h2 { font-size: 2.1rem; line-height:1.08; letter-spacing:-.04em; }
+
+/* Missão, visão e valores */
+.principle-card { position: relative; overflow: hidden; min-height: 320px; }
+.principle-card::after { content:""; position:absolute; width:170px; height:170px; border-radius:999px; background: var(--brand-orange); right:-62px; top:-70px; opacity:.9; }
+.principle-card > * { position: relative; z-index:2; }
+.principle-card.highlight { background: var(--brand-teal); color: white; }
+.principle-card.highlight h3,
+.principle-card.highlight p { color:white; }
+.principle-card.highlight p { color:rgba(255,255,255,.88); }
+.principle-card.large { grid-column: span 2; }
+
+/* Equipe */
+.team-card { text-align:center; padding-top:32px; }
+.team-photo { width: 132px; height: 132px; margin: 0 auto 18px; border-radius: 50%; padding: 7px; background: var(--brand-orange); box-shadow: 0 14px 26px rgba(248,175,86,.26); }
+.team-photo img { width:100%; height:100%; object-fit:cover; border-radius:50%; background: var(--brand-teal-soft); }
+.team-role { color: var(--brand-orange-2); font-weight:900; margin-bottom:6px; }
+.team-card h3 { font-size: 1.12rem; }
+
+/* Projetos */
+.filters { display:flex; flex-wrap:wrap; gap:10px; margin-top:34px; }
+.filter-btn { border:1px solid var(--line); background:white; padding:10px 16px; border-radius:999px; font-weight:900; color:var(--muted); cursor:pointer; }
+.filter-btn.active, .filter-btn:hover { background: var(--brand-teal); color:white; border-color: var(--brand-teal); }
+.project-card { padding:0; overflow:hidden; }
+.project-cover { height:196px; position:relative; background: radial-gradient(circle at 85% 5%, var(--brand-orange) 0 28%, transparent 29%), linear-gradient(135deg, var(--brand-teal), var(--brand-teal-deep)); }
+.project-tag { position:absolute; left:18px; bottom:18px; padding:7px 12px; border-radius:999px; background:rgba(255,255,255,.94); color:var(--brand-teal-deep); font-size:.78rem; font-weight:900; }
+.project-body { padding:24px; }
+.project-body .meta { color:var(--brand-orange-2); font-weight:900; font-size:.88rem; margin-bottom:6px; }
+.text-link { display:inline-flex; margin-top:18px; color:var(--brand-teal); font-weight:900; background:transparent; border:0; cursor:pointer; font-size:1rem; }
+
+/* Parceiros */
+.partner-card { min-height:230px; display:flex; flex-direction:column; justify-content:space-between; }
+.logo-placeholder { width:76px; height:76px; border-radius:24px; display:grid; place-items:center; background:var(--brand-teal-soft); color:var(--brand-teal-deep); font-weight:900; margin-bottom:18px; }
+
+/* Transparência */
+.doc-card { display:flex; align-items:center; justify-content:space-between; gap:16px; }
+.doc-icon { width:52px; height:52px; display:grid; place-items:center; border-radius:16px; background:var(--brand-orange-soft); color:var(--brand-teal-deep); font-weight:900; flex:0 0 auto; }
+
+/* Doação */
+.donation-box { border-radius:38px; padding:44px; color:white; background:linear-gradient(135deg, var(--brand-teal), var(--brand-teal-deep)); box-shadow:var(--shadow); position:relative; overflow:hidden; }
+.donation-box::after { content:""; position:absolute; width:260px; height:260px; border-radius:999px; background:var(--brand-orange); right:-110px; bottom:-140px; }
+.donation-box > * { position: relative; z-index:2; }
+.qr-box { width:180px; height:180px; border-radius:26px; background: linear-gradient(90deg, rgba(255,255,255,.24) 50%, transparent 50%), linear-gradient(rgba(255,255,255,.24) 50%, transparent 50%); background-size:28px 28px; border:8px solid rgba(255,255,255,.35); margin:24px 0; }
+
+/* Forms */
+.form { background:white; border:1px solid var(--line); border-radius:30px; box-shadow:var(--shadow-soft); padding:32px; }
+.form-grid { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+.field { display:grid; gap:7px; margin-bottom:16px; }
+.field.full { grid-column:1 / -1; }
+label { font-weight:900; color:var(--brand-teal-deep); }
+input, select, textarea { width:100%; padding:14px 15px; border:1px solid var(--line); border-radius:16px; font:inherit; outline:none; }
+textarea { min-height:130px; resize:vertical; }
+input:focus, select:focus, textarea:focus { border-color:var(--brand-teal); box-shadow:0 0 0 4px rgba(26,141,158,.12); }
+.form-message { display:none; padding:14px 16px; border-radius:16px; background:var(--brand-teal-soft); color:var(--brand-teal-deep); font-weight:900; margin-top:16px; }
+
+/* CTA / Ubuntu */
+.cta { padding:56px; border-radius:38px; color:white; background: radial-gradient(circle at 90% 12%, var(--brand-orange) 0 18%, transparent 19%), linear-gradient(135deg, var(--brand-teal-deep), var(--brand-teal)); box-shadow:var(--shadow); }
+.cta p { margin:14px 0 24px; max-width:760px; }
+.ubuntu-box { padding:52px; border-radius:38px; background: radial-gradient(circle at 96% 8%, var(--brand-orange) 0 20%, transparent 21%), linear-gradient(135deg, var(--brand-teal), var(--brand-teal-deep)); color:white; box-shadow:var(--shadow); }
+.ubuntu-phrase { margin-top:24px; font-size:clamp(1.6rem, 3vw, 2.65rem); line-height:1.08; letter-spacing:-.04em; font-weight:900; }
+
+/* Footer */
+.site-footer { padding:46px 0 28px; background:var(--brand-teal-deep); color:rgba(255,255,255,.78); }
+.footer-grid { display:grid; grid-template-columns:1.2fr .8fr .8fr; gap:30px; }
+.site-footer .logo { color:white; margin-bottom:16px; }
+.site-footer h4 { color:white; margin-bottom:12px; }
+.site-footer a { display:block; margin-bottom:8px; }
+.footer-bottom { border-top:1px solid rgba(255,255,255,.14); margin-top:28px; padding-top:20px; font-size:.9rem; }
+
+/* Modal */
+.modal { display:none; position:fixed; inset:0; background:rgba(7,95,106,.76); z-index:2000; padding:24px; align-items:center; justify-content:center; }
+.modal.open { display:flex; }
+.modal-content { width:min(720px, 100%); max-height:86vh; overflow:auto; border-radius:30px; background:white; box-shadow:0 30px 90px rgba(0,0,0,.35); padding:30px; }
+.modal-close { float:right; width:42px; height:42px; border-radius:14px; border:1px solid var(--line); background:white; cursor:pointer; font-size:1.2rem; }
+
+/* Reveal */
+.reveal { opacity:0; transform:translateY(22px); transition:.65s ease; }
+.reveal.visible { opacity:1; transform:translateY(0); }
+
+@media (max-width:1024px) {
+  .hero-grid, .split, .grid-2 { grid-template-columns:1fr; }
+  .grid-4 { grid-template-columns:repeat(2, 1fr); }
+  .grid-3 { grid-template-columns:repeat(2, 1fr); }
+  .hero-card-stack { min-height:460px; }
+  .principle-card.large { grid-column: span 1; }
+}
+@media (max-width:860px) {
+  .nav-menu { position:fixed; top:82px; left:20px; right:20px; display:none; flex-direction:column; align-items:stretch; gap:0; padding:14px; border-radius:22px; background:white; border:1px solid var(--line); box-shadow:var(--shadow); }
+  .nav-menu.open { display:flex; }
+  .nav-menu a { display:block; padding:13px; }
+  .nav-cta { display:none; }
+  .mobile-toggle { display:block; }
+  .footer-grid { grid-template-columns:1fr; }
+}
+@media (max-width:640px) {
+  .container { width:min(100% - 28px, var(--container)); }
+  .section { padding:72px 0; }
+  .hero { padding-top:130px; }
+  .hero-actions { flex-direction:column; }
+  .btn { width:100%; }
+  .grid-4, .grid-3, .form-grid { grid-template-columns:1fr; }
+  .visual-card.side, .glass-note { display:none; }
+  .visual-card.main { width:100%; height:300px; }
+  .hero-card-stack { min-height:330px; }
+  .cta, .ubuntu-box, .donation-box { padding:30px; border-radius:28px; }
+  .doc-card { align-items:flex-start; flex-direction:column; }
+}
+
+/* =========================================================
+   Ajustes V3 solicitados
+   - Textos principais da Home com mais presença
+   - Remoção visual dos quadros secundários do Hero
+   - Bloco de doação com QR Code e dados Pix
+   ========================================================= */
+
+.eyebrow-boost {
+  font-size: .96rem;
+  padding: 10px 16px;
+}
+
+.home-title-boost {
+  font-size: clamp(2.25rem, 4.6vw, 3.75rem);
+  line-height: 1.05;
+}
+
+.home-copy-boost {
+  font-size: clamp(1.12rem, 1.55vw, 1.24rem);
+  line-height: 1.78;
+  max-width: 920px;
+}
+
+.hero-card-stack .visual-card.main {
+  width: 100%;
+  height: 500px;
+  right: 0;
+}
+
+.donation-cta {
+  display: grid;
+  grid-template-columns: 1fr 310px;
+  gap: 34px;
+  align-items: center;
+}
+
+.cta-copy p {
+  max-width: 740px;
+}
+
+.cta-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.cta-pix-card {
+  background: rgba(255,255,255,.96);
+  color: var(--brand-teal-deep);
+  border-radius: 28px;
+  padding: 20px;
+  box-shadow: 0 18px 45px rgba(7, 95, 106, .22);
+  border: 1px solid rgba(255,255,255,.55);
+}
+
+.cta-pix-card img {
+  width: 100%;
+  max-width: 230px;
+  margin: 0 auto 16px;
+  border-radius: 18px;
+  background: white;
+  border: 6px solid white;
+}
+
+.pix-data {
+  display: grid;
+  gap: 4px;
+  text-align: center;
+  font-size: .92rem;
+  line-height: 1.35;
+}
+
+.pix-data strong {
+  font-size: 1.05rem;
+  color: var(--brand-teal-deep);
+}
+
+.pix-data span {
+  color: #2f3d49;
+  font-weight: 800;
+}
+
+.donation-qr {
+  width: min(260px, 100%);
+  border-radius: 24px;
+  background: white;
+  border: 8px solid rgba(255,255,255,.55);
+  box-shadow: 0 18px 45px rgba(0,0,0,.12);
+  margin: 24px 0;
+}
+
+.donation-data {
+  display: grid;
+  gap: 2px;
+  color: white;
+  font-size: 1.02rem;
+}
+
+.donation-data p {
+  margin: 0;
+}
+
+@media (max-width: 1024px) {
+  .donation-cta {
+    grid-template-columns: 1fr;
+  }
+
+  .cta-pix-card {
+    max-width: 360px;
+  }
+}
+
+@media (max-width: 640px) {
+  .home-title-boost {
+    font-size: clamp(2rem, 10vw, 2.65rem);
+  }
+
+  .home-copy-boost {
+    font-size: 1.06rem;
+  }
+
+  .hero-card-stack .visual-card.main {
+    height: 330px;
+  }
+
+  .cta-actions {
+    flex-direction: column;
+  }
+
+  .cta-pix-card {
+    max-width: 100%;
+  }
+}
+
+.donation-box .title-lg {
+  color: var(--white);
+}
+
+
+/* =========================================================
+   Ajustes V4 solicitados
+   ========================================================= */
+.hero-simplified .hero-grid-single {
+  grid-template-columns: 1fr;
+  min-height: 70vh;
+}
+.hero-copy-wide {
+  max-width: 1280px;
+}
+.hero-title-no-break {
+  max-width: 1320px;
+  font-size: clamp(3.1rem, 5.4vw, 5.6rem);
+  line-height: 1.02;
+}
+.hero-lead-wide {
+  max-width: 980px;
+}
+.hero-actions-single {
+  justify-content: flex-start;
+}
+.home-centered-block {
+  max-width: 1080px;
+}
+.home-narrow-copy {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 980px;
+}
+.home-centered-action {
+  display: flex;
+  justify-content: center;
+  margin-top: 28px;
+}
+.home-text-block {
+  max-width: 1080px;
+}
+.essence-copy {
+  max-width: 980px;
+  margin: 24px auto 0;
+  color: var(--muted);
+}
+.essence-copy p {
+  margin-top: 16px;
+  text-align: justify;
+}
+.text-justify {
+  text-align: justify;
+}
+
+@media (max-width: 1024px) {
+  .hero-title-no-break {
+    font-size: clamp(2.7rem, 6.2vw, 4.4rem);
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-simplified .hero-grid-single {
+    min-height: auto;
+  }
+  .hero-title-no-break {
+    font-size: clamp(2.1rem, 11vw, 3.25rem);
+    line-height: 1.06;
+  }
+  .hero-actions-single {
+    justify-content: center;
+  }
+  .essence-copy p {
+    text-align: left;
+  }
+}
+
+
+/* =========================================================
+   Ajustes V5 - Fonte Montserrat
+   Padronização global de fonte para todas as páginas
+   ========================================================= */
+html,
+body,
+button,
+input,
+select,
+textarea {
+  font-family: 'Montserrat', Arial, sans-serif;
+}
+
+
+/* =========================================================
+   Ajustes V6 - Página Quem Somos
+   ========================================================= */
+
+/* Hero interno mais limpo, sem logomarca grande e sem etiqueta em pílula */
+.page-hero-clean {
+  padding: 142px 0 92px;
+}
+
+.page-hero-clean .container {
+  position: relative;
+}
+
+.page-section-label {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  color: var(--white);
+  font-weight: 900;
+  font-size: clamp(1.35rem, 2vw, 1.85rem);
+  margin-bottom: 38px;
+}
+
+.page-section-label::after {
+  content: "";
+  height: 3px;
+  flex: 1;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, .45);
+}
+
+.page-title-centered {
+  max-width: 1120px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: clamp(2.65rem, 5.2vw, 4.85rem);
+  line-height: 1.06;
+}
+
+.page-lead-justified {
+  max-width: 980px;
+  margin: 26px auto 0;
+  text-align: justify;
+  font-size: clamp(1.05rem, 1.45vw, 1.22rem);
+}
+
+/* Bloco de apresentação institucional */
+.about-text-justified .title-lg {
+  font-size: clamp(2.1rem, 4vw, 3.45rem);
+}
+
+.about-text-justified .lead {
+  text-align: justify;
+  max-width: 100%;
+}
+
+.photo-panel-education {
+  background:
+    linear-gradient(to top, rgba(7,95,106,.66), rgba(7,95,106,.08)),
+    url("../img/referencia-missao.png") center/cover;
+}
+
+/* Texto antes dos cards de missão, visão e valores */
+.institutional-text {
+  max-width: 1040px;
+  margin: 26px auto 0;
+  color: var(--muted);
+  font-size: clamp(1.06rem, 1.45vw, 1.22rem);
+  line-height: 1.78;
+}
+
+.institutional-text p {
+  text-align: justify;
+  margin-top: 16px;
+}
+
+/* Cards de missão, visão e valores no mesmo tamanho e na mesma linha */
+.equal-cards {
+  align-items: stretch;
+}
+
+.principle-card-equal {
+  min-height: 390px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.principle-card-equal p {
+  text-align: left;
+}
+
+/* Ajuste do bloco da gestão administrativa */
+.section-cream .team-card {
+  min-height: 330px;
+}
+
+@media (max-width: 1024px) {
+  .page-title-centered {
+    font-size: clamp(2.4rem, 6vw, 4rem);
+  }
+
+  .principle-card-equal {
+    min-height: 360px;
+  }
+}
+
+@media (max-width: 640px) {
+  .page-hero-clean {
+    padding: 124px 0 72px;
+  }
+
+  .page-section-label {
+    margin-bottom: 26px;
+  }
+
+  .page-title-centered {
+    font-size: clamp(2rem, 10vw, 3rem);
+  }
+
+  .page-lead-justified,
+  .about-text-justified .lead,
+  .institutional-text p {
+    text-align: left;
+  }
+
+  .principle-card-equal {
+    min-height: auto;
+  }
+}
+
+
+/* =========================================================
+   Ajustes V7 - Refinamento da página Quem Somos
+   ========================================================= */
+
+/* Remove a faixa "Quem somos" com linha horizontal do topo */
+.page-hero-no-label {
+  padding: 150px 0 100px;
+}
+
+.page-hero-no-label .page-section-label {
+  display: none;
+}
+
+/* Mantém o hero interno mais equilibrado e centralizado */
+.page-hero-no-label .page-title-centered {
+  max-width: 1120px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: clamp(2.45rem, 4.75vw, 4.45rem);
+  line-height: 1.08;
+}
+
+.page-hero-no-label .page-lead-justified {
+  max-width: 980px;
+  margin: 28px auto 0;
+  text-align: justify;
+}
+
+/* Nova seção Sobre Nós sem imagem lateral */
+.section-about-centered {
+  background: var(--white);
+  padding: 92px 0;
+}
+
+.about-centered-content {
+  max-width: 1120px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-centered-content .eyebrow {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.about-title-horizontal {
+  max-width: 1080px;
+  margin: 0 auto;
+  font-size: clamp(2rem, 3.75vw, 3.35rem);
+  line-height: 1.12;
+}
+
+.about-centered-text {
+  max-width: 960px;
+  margin: 28px auto 0;
+  color: var(--muted);
+  font-size: clamp(1.05rem, 1.4vw, 1.2rem);
+  line-height: 1.78;
+  text-align: center;
+}
+
+.about-centered-text p + p {
+  margin-top: 16px;
+}
+
+/* Esconde qualquer painel de foto dessa seção caso permaneça em cache ou reaproveitamento */
+.section-about-centered .photo-panel {
+  display: none;
+}
+
+@media (max-width: 640px) {
+  .page-hero-no-label {
+    padding: 124px 0 72px;
+  }
+
+  .page-hero-no-label .page-title-centered {
+    font-size: clamp(2rem, 9.5vw, 3rem);
+  }
+
+  .page-hero-no-label .page-lead-justified {
+    text-align: left;
+  }
+
+  .section-about-centered {
+    padding: 72px 0;
+  }
+
+  .about-title-horizontal {
+    font-size: clamp(1.85rem, 8.8vw, 2.65rem);
+  }
+
+  .about-centered-text {
+    text-align: left;
+  }
+}
+
+
+/* =========================================================
+   Ajustes V8 - Home proporcional ao padrão da página Quem Somos
+   Arquivo para substituir: assets/css/style.css
+   ========================================================= */
+
+.hero-simplified {
+  min-height: 88vh;
+  padding: 150px 0 96px;
+}
+
+.hero-simplified .hero-grid-single {
+  min-height: 64vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-copy-wide {
+  max-width: 1120px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.hero-title-no-break {
+  max-width: 1120px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: clamp(2.45rem, 4.75vw, 4.45rem);
+  line-height: 1.08;
+  letter-spacing: -0.055em;
+}
+
+.hero-lead-wide {
+  max-width: 980px;
+  margin: 28px auto 0;
+  text-align: justify;
+  font-size: clamp(1.05rem, 1.45vw, 1.22rem);
+  line-height: 1.72;
+}
+
+.hero-actions-single {
+  justify-content: center;
+  margin-top: 34px;
+}
+
+.hero-actions-single .btn {
+  min-width: 230px;
+}
+
+/* Ajuste fino para telas médias */
+@media (max-width: 1024px) {
+  .hero-title-no-break {
+    font-size: clamp(2.35rem, 6vw, 4rem);
+  }
+
+  .hero-simplified .hero-grid-single {
+    min-height: 58vh;
+  }
+}
+
+/* Ajuste mobile */
+@media (max-width: 640px) {
+  .hero-simplified {
+    min-height: auto;
+    padding: 124px 0 78px;
+  }
+
+  .hero-simplified .hero-grid-single {
+    min-height: auto;
+  }
+
+  .hero-title-no-break {
+    font-size: clamp(2rem, 9.5vw, 3rem);
+    line-height: 1.08;
+    letter-spacing: -0.045em;
+  }
+
+  .hero-lead-wide {
+    text-align: left;
+    font-size: 1.02rem;
+  }
+
+  .hero-actions-single .btn {
+    min-width: 100%;
+  }
+}
+
+
+/* =========================================================
+   Ajustes V9 - Quem Somos
+   Arquivos para substituir:
+   - quem-somos.html
+   - assets/css/style.css
+   ========================================================= */
+
+/* Permite destaque laranja no título principal da página Quem Somos */
+.page-title-centered span {
+  color: var(--brand-orange);
+}
+
+/* Ajusta o hero interno para se aproximar visualmente da Home */
+.page-hero-no-label .page-title-centered {
+  max-width: 1120px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: clamp(2.45rem, 4.75vw, 4.45rem);
+  line-height: 1.08;
+  letter-spacing: -0.055em;
+}
+
+.page-hero-no-label .page-lead-justified {
+  max-width: 980px;
+  margin: 28px auto 0;
+  text-align: justify;
+  font-size: clamp(1.05rem, 1.45vw, 1.22rem);
+  line-height: 1.72;
+}
+
+/* Remove espaçamento extra que existia por causa do marcador Sobre Nós */
+.about-centered-content .title-lg:first-child,
+.about-centered-content .about-title-horizontal {
+  margin-top: 0;
+}
+
+@media (max-width: 640px) {
+  .page-hero-no-label .page-title-centered {
+    font-size: clamp(2rem, 9.5vw, 3rem);
+  }
+
+  .page-hero-no-label .page-lead-justified {
+    text-align: left;
+  }
+}
+
+
+/* =========================================================
+   Ajustes V10 - Página Projetos
+   Arquivos para substituir:
+   - projetos.html
+   - assets/js/projetos.js
+   - assets/css/style.css
+   ========================================================= */
+
+/* Hero da página Projetos no mesmo padrão de proporção usado na Home e em Quem Somos */
+.projects-hero {
+  padding: 150px 0 100px;
+}
+
+.projects-hero .page-title-centered {
+  max-width: 1120px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: clamp(2.45rem, 4.75vw, 4.45rem);
+  line-height: 1.08;
+  letter-spacing: -0.055em;
+}
+
+.projects-hero .page-title-centered span {
+  color: var(--brand-orange);
+}
+
+.projects-hero .page-lead-justified {
+  max-width: 980px;
+  margin: 28px auto 0;
+  text-align: justify;
+  font-size: clamp(1.05rem, 1.45vw, 1.22rem);
+  line-height: 1.72;
+}
+
+/* Grid e cards da página Projetos */
+.projects-section {
+  background: var(--white);
+}
+
+.projects-grid-modern {
+  margin-top: 34px;
+}
+
+.projects-grid-modern .project-card {
+  min-height: 520px;
+  display: flex;
+  flex-direction: column;
+}
+
+.projects-grid-modern .project-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.projects-grid-modern .project-body h3 {
+  margin-top: 0;
+}
+
+.projects-grid-modern .project-body p {
+  flex: 1;
+}
+
+/* Status removido dos cards; permanece apenas no modal */
+.project-body .meta {
+  display: none !important;
+}
+
+/* Modal de projeto mais confortável */
+.project-modal-content {
+  width: min(920px, 100%);
+  padding: 38px;
+}
+
+.project-modal-content .title-lg {
+  font-size: clamp(2.2rem, 4vw, 3.7rem);
+}
+
+.project-detail-grid {
+  margin-top: 28px;
+}
+
+.project-detail-card {
+  min-height: 132px;
+}
+
+/* Carrossel de fotos dentro do detalhe do projeto */
+.project-gallery {
+  margin-top: 32px;
+  padding-top: 26px;
+  border-top: 1px solid var(--line);
+}
+
+.project-gallery-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.project-gallery-head h3 {
+  color: var(--brand-teal-deep);
+  font-size: 1.35rem;
+  line-height: 1.2;
+}
+
+.gallery-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.gallery-btn {
+  width: 42px;
+  height: 42px;
+  border-radius: 14px;
+  border: 1px solid var(--line);
+  background: var(--white);
+  color: var(--brand-teal-deep);
+  font-size: 1.55rem;
+  font-weight: 900;
+  cursor: pointer;
+  transition: .2s ease;
+}
+
+.gallery-btn:hover {
+  background: var(--brand-teal);
+  color: var(--white);
+  border-color: var(--brand-teal);
+}
+
+.gallery-frame {
+  width: 100%;
+  height: 330px;
+  border-radius: 26px;
+  overflow: hidden;
+  background: var(--brand-teal-soft);
+  box-shadow: var(--shadow-soft);
+}
+
+.gallery-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gallery-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.gallery-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  border: 0;
+  background: rgba(7, 95, 106, .22);
+  cursor: pointer;
+  transition: .2s ease;
+}
+
+.gallery-dot.active {
+  width: 28px;
+  background: var(--brand-orange);
+}
+
+@media (max-width: 1024px) {
+  .projects-hero .page-title-centered {
+    font-size: clamp(2.35rem, 6vw, 4rem);
+  }
+}
+
+@media (max-width: 640px) {
+  .projects-hero {
+    padding: 124px 0 72px;
+  }
+
+  .projects-hero .page-title-centered {
+    font-size: clamp(2rem, 9.5vw, 3rem);
+  }
+
+  .projects-hero .page-lead-justified {
+    text-align: left;
+  }
+
+  .project-modal-content {
+    padding: 26px;
+  }
+
+  .project-detail-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-frame {
+    height: 230px;
+  }
+
+  .project-gallery-head {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+
+/* =========================================================
+   Ajustes V11 - Página Parceiros
+   Arquivos para substituir:
+   - parceiros.html
+   - parceiro-detalhes.html
+   - assets/js/parceiros.js
+   - assets/css/style.css
+   - assets/img/parceiros/*.svg
+   ========================================================= */
+
+/* Hero da página Parceiros no padrão visual das demais páginas */
+.partners-hero {
+  padding: 150px 0 100px;
+}
+
+.partners-hero .page-title-centered,
+.partner-detail-hero .page-title-centered {
+  max-width: 1120px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: clamp(2.45rem, 4.75vw, 4.45rem);
+  line-height: 1.08;
+  letter-spacing: -0.055em;
+}
+
+.partners-hero .page-title-centered span,
+.partner-detail-hero .page-title-centered span {
+  color: var(--brand-orange);
+}
+
+.partners-hero .page-lead-justified,
+.partner-detail-hero .page-lead-justified {
+  max-width: 980px;
+  margin: 28px auto 0;
+  text-align: justify;
+  font-size: clamp(1.05rem, 1.45vw, 1.22rem);
+  line-height: 1.72;
+}
+
+/* Remove visual antigo de siglas/monogramas */
+.logo-placeholder {
+  display: none !important;
+}
+
+/* Seção principal de parceiros sem etiqueta "Ecossistema" */
+.partners-section {
+  background: var(--white);
+}
+
+.partners-section-title {
+  max-width: 1120px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.partners-section-lead {
+  max-width: 860px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.partners-grid-modern {
+  margin-top: 42px;
+  align-items: stretch;
+}
+
+/* Card moderno: logo + nome lado a lado */
+.partner-card-modern {
+  min-height: 330px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.partner-card-head {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 22px;
+}
+
+.partner-logo {
+  width: 136px;
+  height: 58px;
+  object-fit: contain;
+  flex: 0 0 auto;
+  border-radius: 14px;
+}
+
+.partner-card-head h3 {
+  margin: 0;
+  font-size: 1.28rem;
+  line-height: 1.18;
+}
+
+.partner-card-modern p {
+  font-size: 1.04rem;
+  line-height: 1.65;
+}
+
+/* Tela de detalhes do parceiro */
+.partner-detail-hero {
+  padding: 150px 0 90px;
+}
+
+.partner-detail-heading {
+  display: grid;
+  grid-template-columns: 230px 1fr;
+  gap: 38px;
+  align-items: center;
+}
+
+.partner-detail-heading > img {
+  width: 100%;
+  max-width: 230px;
+  border-radius: 28px;
+  background: var(--white);
+  padding: 18px;
+  box-shadow: 0 18px 45px rgba(0,0,0,.12);
+}
+
+.partner-detail-heading .page-title-centered {
+  text-align: left;
+}
+
+.partner-detail-heading .page-lead-justified {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.partner-detail-layout {
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  gap: 34px;
+  align-items: start;
+}
+
+.partner-detail-card {
+  position: sticky;
+  top: 110px;
+}
+
+.partner-detail-logo {
+  width: 100%;
+  max-width: 240px;
+  margin-bottom: 22px;
+  border-radius: 18px;
+}
+
+.partner-project-list {
+  display: grid;
+  gap: 18px;
+  margin-top: 28px;
+}
+
+.partner-project-item {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  padding: 28px;
+  box-shadow: var(--shadow-soft);
+}
+
+.partner-project-item h3 {
+  color: var(--brand-teal-deep);
+  font-size: 1.35rem;
+  margin: 12px 0 8px;
+}
+
+.partner-project-item p {
+  color: var(--muted);
+  font-size: 1.04rem;
+  line-height: 1.7;
+}
+
+.project-status-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: var(--brand-orange-soft);
+  color: var(--brand-teal-deep);
+  font-weight: 900;
+  font-size: .86rem;
+}
+
+@media (max-width: 1024px) {
+  .partners-hero .page-title-centered,
+  .partner-detail-hero .page-title-centered {
+    font-size: clamp(2.35rem, 6vw, 4rem);
+  }
+
+  .partner-detail-heading,
+  .partner-detail-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .partner-detail-heading {
+    text-align: center;
+  }
+
+  .partner-detail-heading > img {
+    margin: 0 auto;
+  }
+
+  .partner-detail-heading .page-title-centered,
+  .partner-detail-heading .page-lead-justified {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .partner-detail-card {
+    position: static;
+  }
+}
+
+@media (max-width: 640px) {
+  .partners-hero,
+  .partner-detail-hero {
+    padding: 124px 0 72px;
+  }
+
+  .partners-hero .page-title-centered,
+  .partner-detail-hero .page-title-centered {
+    font-size: clamp(2rem, 9.5vw, 3rem);
+  }
+
+  .partners-hero .page-lead-justified,
+  .partner-detail-hero .page-lead-justified,
+  .partner-detail-heading .page-lead-justified {
+    text-align: left;
+  }
+
+  .partner-card-head {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .partner-logo {
+    width: 180px;
+    height: 64px;
+  }
+}
+
+
+/* =========================================================
+   Ajustes V12 - Doação, Contato e Transparência
+   Arquivos para substituir:
+   - doacao.html
+   - contato.html
+   - transparencia.html
+   - assets/css/style.css
+   ========================================================= */
+
+/* Hero das páginas Doação, Contato e Transparência no padrão visual atual */
+.donation-page-hero,
+.contact-page-hero,
+.transparency-page-hero {
+  padding: 150px 0 100px;
+}
+
+.donation-page-hero .page-title-centered,
+.contact-page-hero .page-title-centered,
+.transparency-page-hero .page-title-centered {
+  max-width: 1120px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: clamp(2.45rem, 4.75vw, 4.45rem);
+  line-height: 1.08;
+  letter-spacing: -0.055em;
+}
+
+.donation-page-hero .page-title-centered span,
+.contact-page-hero .page-title-centered span,
+.transparency-page-hero .page-title-centered span {
+  color: var(--brand-orange);
+}
+
+.donation-page-hero .page-lead-justified,
+.contact-page-hero .page-lead-justified,
+.transparency-page-hero .page-lead-justified {
+  max-width: 980px;
+  margin: 28px auto 0;
+  text-align: justify;
+  font-size: clamp(1.05rem, 1.45vw, 1.22rem);
+  line-height: 1.72;
+}
+
+/* Doação */
+.donation-page-section {
+  background: var(--white);
+}
+
+.donation-page-card {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 42px;
+  align-items: center;
+  border-radius: 38px;
+  padding: 50px;
+  background:
+    radial-gradient(circle at 96% 4%, var(--brand-orange) 0 18%, transparent 19%),
+    linear-gradient(135deg, var(--brand-teal), var(--brand-teal-deep));
+  color: var(--white);
+  box-shadow: var(--shadow);
+}
+
+.donation-page-card .title-lg {
+  color: var(--white);
+}
+
+.donation-page-copy p {
+  color: rgba(255,255,255,.88);
+  font-size: 1.08rem;
+  line-height: 1.72;
+}
+
+.donation-data-card {
+  margin-top: 26px;
+  padding: 22px;
+  border-radius: 24px;
+  background: rgba(255,255,255,.12);
+  border: 1px solid rgba(255,255,255,.22);
+  backdrop-filter: blur(12px);
+}
+
+.donation-data-card p {
+  margin: 0;
+  color: var(--white);
+  font-weight: 700;
+}
+
+.donation-data-card p + p {
+  margin-top: 6px;
+}
+
+.donation-page-qr {
+  background: rgba(255,255,255,.96);
+  border-radius: 30px;
+  padding: 24px;
+  box-shadow: 0 20px 55px rgba(0,0,0,.18);
+}
+
+.donation-page-qr img {
+  width: 100%;
+  border-radius: 18px;
+  background: var(--white);
+}
+
+/* Contato */
+.contact-page-section {
+  background: var(--white);
+}
+
+.contact-page-layout {
+  display: grid;
+  grid-template-columns: .85fr 1.15fr;
+  gap: 34px;
+  align-items: start;
+}
+
+.contact-info-card {
+  min-height: 100%;
+}
+
+.contact-info-card .title-lg {
+  font-size: clamp(2rem, 3.4vw, 3rem);
+}
+
+.contact-detail-list {
+  margin-top: 28px;
+  display: grid;
+  gap: 12px;
+  color: var(--muted);
+  font-size: 1.04rem;
+  line-height: 1.65;
+}
+
+.contact-detail-list p {
+  margin: 0;
+}
+
+.contact-detail-list strong {
+  color: var(--brand-teal-deep);
+}
+
+.contact-form-modern {
+  min-height: 100%;
+}
+
+/* Transparência */
+.transparency-section {
+  background: var(--white);
+}
+
+.transparency-grid .doc-card {
+  min-height: 170px;
+}
+
+/* Remove possíveis etiquetas antigas nas páginas ajustadas */
+.donation-page-section .eyebrow,
+.contact-page-section .eyebrow,
+.transparency-section .eyebrow {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .donation-page-card,
+  .contact-page-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .donation-page-qr {
+    max-width: 360px;
+  }
+
+  .donation-page-hero .page-title-centered,
+  .contact-page-hero .page-title-centered,
+  .transparency-page-hero .page-title-centered {
+    font-size: clamp(2.35rem, 6vw, 4rem);
+  }
+}
+
+@media (max-width: 640px) {
+  .donation-page-hero,
+  .contact-page-hero,
+  .transparency-page-hero {
+    padding: 124px 0 72px;
+  }
+
+  .donation-page-hero .page-title-centered,
+  .contact-page-hero .page-title-centered,
+  .transparency-page-hero .page-title-centered {
+    font-size: clamp(2rem, 9.5vw, 3rem);
+  }
+
+  .donation-page-hero .page-lead-justified,
+  .contact-page-hero .page-lead-justified,
+  .transparency-page-hero .page-lead-justified {
+    text-align: left;
+  }
+
+  .donation-page-card {
+    padding: 30px;
+    border-radius: 28px;
+  }
+
+  .donation-page-qr {
+    max-width: 100%;
+  }
+
+  .contact-page-layout {
+    gap: 24px;
+  }
+}
+
+
+/* =========================================================
+   Ajustes V13 - Estrutura completa de Transparência
+   Arquivos para substituir/adicionar:
+   - transparencia.html
+   - transparencia-estatuto.html
+   - transparencia-relatorios.html
+   - transparencia-planos-trabalho.html
+   - transparencia-termos-fomento.html
+   - transparencia-termos-parceria.html
+   - transparencia-prestacao-contas.html
+   - assets/css/style.css
+   - assets/img/transparencia/termos-fomento/resumo-termos-fomento.png
+   - assets/docs/transparencia/*
+   ========================================================= */
+
+.transparency-hub-section,
+.transparency-doc-section {
+  background: var(--white);
+}
+
+.transparency-hub-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 26px;
+}
+
+.transparency-category-card {
+  display: grid;
+  grid-template-columns: 72px 1fr;
+  gap: 22px;
+  min-height: 230px;
+  align-items: start;
+}
+
+.transparency-category-card h3 {
+  font-size: 1.38rem;
+  margin-bottom: 10px;
+}
+
+.transparency-category-card p {
+  color: var(--muted);
+  font-size: 1.02rem;
+  line-height: 1.7;
+}
+
+.transparency-actions-top {
+  margin-bottom: 34px;
+}
+
+.document-list-modern {
+  display: grid;
+  gap: 20px;
+}
+
+.document-modern-card {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 22px;
+  align-items: center;
+  min-height: 160px;
+}
+
+.document-modern-main {
+  display: grid;
+  grid-template-columns: 72px 1fr;
+  gap: 20px;
+  align-items: start;
+}
+
+.document-modern-main h3 {
+  font-size: 1.34rem;
+  margin-bottom: 6px;
+}
+
+.document-modern-main p {
+  color: var(--muted);
+  font-size: 1.02rem;
+  line-height: 1.66;
+}
+
+.document-meta {
+  color: var(--brand-orange-2) !important;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.document-modern-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.transparency-summary-card {
+  border-radius: 34px;
+  padding: 30px;
+  margin-bottom: 32px;
+  background: var(--brand-teal-soft);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-soft);
+}
+
+.transparency-summary-card h2 {
+  color: var(--brand-teal-deep);
+  font-size: clamp(1.8rem, 3vw, 2.7rem);
+  line-height: 1.1;
+  margin-bottom: 10px;
+}
+
+.transparency-summary-card p {
+  color: var(--muted);
+  max-width: 850px;
+  margin-bottom: 18px;
+}
+
+.transparency-summary-card img {
+  width: 100%;
+  margin-top: 24px;
+  border-radius: 22px;
+  background: var(--white);
+  box-shadow: var(--shadow-soft);
+}
+
+@media (max-width: 1024px) {
+  .transparency-hub-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .document-modern-card {
+    grid-template-columns: 1fr;
+  }
+
+  .document-modern-actions {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 640px) {
+  .transparency-category-card,
+  .document-modern-main {
+    grid-template-columns: 1fr;
+  }
+
+  .transparency-summary-card {
+    padding: 22px;
+    border-radius: 26px;
+  }
+}
+
+/* =========================================================
+   Ajustes V14 - Home refinada + WhatsApp flutuante
+   ========================================================= */
+.home-section-alt-1 { background: var(--white); }
+.home-section-alt-2 { background: #fbfbf8; }
+.home-section-alt-3 { background: #f4fafb; }
+.home-section-alt-4 { background: var(--white); }
+
+.home-title-breathing {
+  max-width: 1180px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.home-copy-justify {
+  max-width: 1120px;
+  margin: 18px auto 0;
+  color: var(--muted);
+  font-size: clamp(1.08rem, 1.6vw, 1.22rem);
+  line-height: 1.9;
+  text-align: justify;
+  text-align-last: center;
+}
+
+.home-copy-justify p + p {
+  margin-top: 18px;
+}
+
+.home-copy-justify.narrow {
+  max-width: 980px;
+}
+
+.section-intro-actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 26px;
+  flex-wrap: wrap;
+}
+
+.section-project-preview {
+  margin-top: 42px;
+}
+
+.areas-grid .card,
+#projetos-grid .card {
+  height: 100%;
+}
+
+.floating-whatsapp {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 1600;
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  background: #25D366;
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 18px 40px rgba(37, 211, 102, .35);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.floating-whatsapp:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 22px 48px rgba(37, 211, 102, .42);
+}
+
+.floating-whatsapp svg {
+  width: 30px;
+  height: 30px;
+  fill: currentColor;
+}
+
+.floating-whatsapp-label {
+  position: absolute;
+  right: 74px;
+  white-space: nowrap;
+  background: rgba(7,95,106,.96);
+  color: white;
+  padding: 10px 14px;
+  border-radius: 999px;
+  font-size: .86rem;
+  font-weight: 800;
+  opacity: 0;
+  transform: translateX(8px);
+  transition: .2s ease;
+  pointer-events: none;
+}
+
+.floating-whatsapp:hover .floating-whatsapp-label {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+@media (max-width: 860px) {
+  .home-copy-justify {
+    text-align: left;
+    text-align-last: auto;
+  }
+}
+
+@media (max-width: 640px) {
+  .floating-whatsapp {
+    width: 58px;
+    height: 58px;
+    right: 14px;
+    bottom: 14px;
+  }
+
+  .floating-whatsapp-label {
+    display: none;
+  }
+}
+
+/* =========================================================
+   Ajustes V15 - Home refinada
+   ========================================================= */
+.section-soft-accent {
+  background: linear-gradient(180deg, #f7fbfc 0%, #f2f8f9 100%);
+}
+
+.home-merged-copy {
+  max-width: 1040px;
+  text-align: justify;
+  text-align-last: auto;
+}
+
+.home-merged-copy p {
+  margin-bottom: 0;
+}
+
+.donation-section-clean {
+  background: linear-gradient(135deg, #1a8996 0%, #0b6a76 100%);
+}
+
+.donation-panel {
+  background: rgba(7, 95, 106, 0.28);
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 34px;
+  padding: 30px;
+}
+
+.donation-cta-clean {
+  gap: 42px;
+}
+
+.donation-eyebrow {
+  display: inline-flex;
+  margin-bottom: 18px;
+}
+
+.btn-outline-light {
+  color: var(--white);
+  background: transparent;
+  border-color: rgba(255,255,255,.35);
+}
+
+.btn-outline-light:hover {
+  background: rgba(255,255,255,.10);
+}
+
+.cta-pix-card-clean {
+  background: #f8fbfc;
+  border: 1px solid rgba(255,255,255,.18);
+  border-radius: 30px;
+  padding: 22px 22px 20px;
+  box-shadow: 0 10px 28px rgba(0,0,0,.10);
+}
+
+.pix-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: #eef6f7;
+  color: var(--brand-teal-deep);
+  font-weight: 800;
+  font-size: .92rem;
+  margin: 0 auto 14px;
+}
+
+.cta-pix-card-clean img {
+  max-width: 220px;
+  margin-bottom: 14px;
+  border-radius: 18px;
+  border: 1px solid #e5ecef;
+  box-shadow: none;
+}
+
+.cta-pix-card-clean .pix-data {
+  gap: 6px;
+}
+
+.cta-pix-card-clean .pix-data span {
+  font-weight: 700;
+}
+
+@media (max-width: 1024px) {
+  .donation-panel {
+    padding: 22px;
+  }
+}
+
+@media (max-width: 640px) {
+  .donation-panel {
+    padding: 18px;
+    border-radius: 24px;
+  }
+
+  .cta-pix-card-clean {
+    padding: 18px;
+    border-radius: 24px;
+  }
+}
+
+/* =========================================================
+   Ajustes V16 - Página de Doação reforçada
+   ========================================================= */
+.donation-page-showcase {
+  padding-top: 12px;
+}
+
+.donation-showcase-grid {
+  display: grid;
+  grid-template-columns: minmax(320px, 450px) minmax(0, 1fr);
+  gap: 42px;
+  align-items: stretch;
+}
+
+.donation-focus-card {
+  background: linear-gradient(135deg, var(--brand-teal) 0%, var(--brand-teal-deep) 100%);
+  color: var(--white);
+  border-radius: 34px;
+  padding: 38px 36px;
+  box-shadow: 0 22px 60px rgba(7, 95, 106, .18);
+}
+
+.donation-focus-card .title-lg {
+  color: var(--white);
+  margin-bottom: 10px;
+}
+
+.donation-focus-card p {
+  color: rgba(255,255,255,.92);
+  font-size: 1.04rem;
+  line-height: 1.6;
+}
+
+.donation-focus-qr {
+  margin: 28px 0 26px;
+  background: #ffffff;
+  border-radius: 28px;
+  padding: 12px;
+  box-shadow: 0 16px 38px rgba(0,0,0,.12);
+  display: inline-flex;
+}
+
+.donation-focus-qr img {
+  width: min(100%, 290px);
+  display: block;
+  border-radius: 20px;
+}
+
+.donation-focus-data {
+  display: grid;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.donation-focus-data p {
+  margin: 0;
+  font-size: 1.02rem;
+}
+
+.donation-impact-side {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.donation-impact-title {
+  max-width: 760px;
+  margin-bottom: 30px;
+}
+
+.donation-impact-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.donation-impact-card {
+  background: var(--white);
+  border: 1px solid #dde8eb;
+  border-radius: 28px;
+  padding: 34px 34px 30px;
+  box-shadow: 0 10px 28px rgba(10, 87, 96, .06);
+}
+
+.donation-impact-card .icon {
+  width: 74px;
+  height: 74px;
+  margin-bottom: 20px;
+}
+
+.donation-impact-card h3 {
+  margin: 0 0 14px;
+  color: var(--brand-teal-deep);
+  font-size: 1.95rem;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+}
+
+.donation-impact-card p {
+  margin: 0;
+  color: var(--slate);
+  font-size: 1rem;
+  line-height: 1.62;
+}
+
+@media (max-width: 1100px) {
+  .donation-showcase-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .donation-impact-title {
+    max-width: none;
+  }
+}
+
+@media (max-width: 720px) {
+  .donation-impact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .donation-focus-card {
+    padding: 28px 22px;
+    border-radius: 26px;
+  }
+
+  .donation-impact-card {
+    padding: 26px 22px 24px;
+    border-radius: 22px;
+  }
+
+  .donation-impact-card h3 {
+    font-size: 1.6rem;
+  }
+}
+
+
+/* =========================================================
+   Ajustes V17 - Doação no padrão do título de referência
+   + restauração do efeito reveal na Home
+   ========================================================= */
+
+.donation-page-showcase-v17 {
+  padding-top: 82px;
+}
+
+.donation-title-like-reference {
+  max-width: 1180px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: clamp(2.35rem, 4.4vw, 4.35rem);
+  line-height: 1.08;
+  letter-spacing: -0.055em;
+}
+
+.donation-lead-centered {
+  max-width: 880px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.donation-showcase-grid-v17 {
+  margin-top: 54px;
+  grid-template-columns: minmax(320px, 430px) minmax(0, 1fr);
+}
+
+.donation-impact-side-v17 {
+  justify-content: stretch;
+}
+
+.donation-impact-side-v17 .donation-impact-grid {
+  height: 100%;
+}
+
+.donation-impact-side-v17 .donation-impact-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* Suaviza o efeito de entrada para reforçar a sensação de movimento ao rolar */
+.reveal {
+  opacity: 0;
+  transform: translateY(34px);
+  transition: opacity .75s ease, transform .75s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Evita que o conteúdo da primeira dobra fique invisível por muito tempo */
+.hero .reveal {
+  transition-duration: .55s;
+}
+
+@media (max-width: 1100px) {
+  .donation-showcase-grid-v17 {
+    grid-template-columns: 1fr;
+  }
+
+  .donation-focus-card {
+    max-width: 520px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 720px) {
+  .donation-page-showcase-v17 {
+    padding-top: 64px;
+  }
+
+  .donation-title-like-reference {
+    font-size: clamp(2rem, 9.5vw, 3rem);
+  }
+
+  .donation-lead-centered {
+    text-align: left;
+  }
+}
