@@ -1,0 +1,24 @@
+IMPORTANTE PARA PUBLICAR NO GITHUB PAGES
+
+O seu print mostra que os HTMLs foram enviados, mas a pasta assets não aparece.
+
+Sem a pasta assets, o site abre sem layout, sem cores e sem JavaScript.
+
+Suba também esta pasta inteira:
+
+assets/
+
+Ela precisa conter, no mínimo:
+
+assets/css/style.css
+assets/js/layout.js
+assets/js/main.js
+assets/js/projetos.js
+assets/img/
+
+No GitHub, a raiz do repositório precisa mostrar:
+index.html
+assets/
+contato.html
+doacao.html
+...

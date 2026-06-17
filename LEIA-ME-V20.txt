@@ -1,0 +1,25 @@
+PACOTE V20 - BASE GITHUB PRESERVADA
+
+Este pacote NÃO usa as versões V18/V19 como base visual.
+Ele usa a versão final do GitHub como base e aplica apenas ajustes conservadores:
+- substituição de textos;
+- inclusão/substituição de imagens;
+- imagem da Home em plano de fundo com o verde por cima;
+- atualização de projetos e parceiros;
+- carrossel automático nas fotos dos projetos com clique para ampliar;
+- Instagram com ícone clicável.
+
+Arquivos mais importantes alterados:
+- index.html
+- quem-somos.html
+- projetos.html
+- doacao.html
+- contato.html
+- assets/js/projetos.js
+- assets/js/parceiros.js
+- assets/css/style.css
+- assets/img/refino-final/*
+- assets/img/parceiros/logo-diamond-corporate.svg
+
+Observação:
+A logo final do PULSAR ainda não foi enviada; foi mantido um placeholder discreto.

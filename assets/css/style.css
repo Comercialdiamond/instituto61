@@ -2160,3 +2160,290 @@ textarea {
     text-align: left;
   }
 }
+
+
+/* =========================================================
+   V20 - Ajustes conservadores sobre a base final do GitHub
+   Mantém escala de fontes/layout e aplica apenas textos/imagens.
+   ========================================================= */
+
+/* Home com imagem do material como plano de fundo, mantendo o tom verde à frente */
+.hero-bg-material {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background:
+    linear-gradient(120deg, rgba(7, 95, 106, .94) 0%, rgba(20, 142, 154, .91) 58%, rgba(248, 175, 86, .35) 100%),
+    url("../img/refino-final/home-capa-maos.jpg") center center / cover no-repeat;
+}
+
+.hero-bg-material::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px);
+  background-size: 42px 42px, 42px 42px;
+}
+
+.hero-bg-material .hero-copy-wide {
+  position: relative;
+  z-index: 1;
+}
+
+/* Quem Somos: imagem do material como fundo discreto no topo */
+.page-hero-bg-about {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background:
+    linear-gradient(120deg, rgba(7, 95, 106, .96) 0%, rgba(18, 143, 154, .9) 62%, rgba(248,175,86,.38) 100%),
+    url("../img/refino-final/quem-somos-faixa-grupo.jpg") center center / cover no-repeat;
+}
+
+.page-hero-bg-about::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: rgba(7,95,106,.15);
+}
+
+/* Cards de projetos com imagem real no topo, sem desenhos extras */
+.project-cover-with-image {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--brand-teal), var(--brand-teal-deep));
+}
+
+.project-cover-with-image::before,
+.project-cover-with-image::after {
+  content: none !important;
+}
+
+.project-cover-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: .92;
+}
+
+.project-cover-with-image .project-tag {
+  z-index: 2;
+}
+
+/* Galeria automática: mantém visual original e só adiciona clique para ampliar */
+.gallery-controls {
+  display: none;
+}
+
+.gallery-helper {
+  color: var(--muted);
+  font-size: .9rem;
+  font-weight: 600;
+}
+
+.gallery-frame-zoom {
+  cursor: zoom-in;
+}
+
+.gallery-frame-zoom img {
+  object-fit: contain;
+  background: var(--brand-teal-soft);
+}
+
+/* Lightbox simples para ampliar foto */
+.project-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 28px;
+  background: rgba(7, 25, 31, .88);
+}
+
+.project-lightbox.open {
+  display: flex;
+}
+
+.project-lightbox img {
+  max-width: min(96vw, 1200px);
+  max-height: 88vh;
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 28px 80px rgba(0,0,0,.38);
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  width: 50px;
+  height: 50px;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,.25);
+  background: rgba(255,255,255,.12);
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* Instagram no contato com ícone clicável */
+.contact-social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  width: fit-content;
+  color: var(--brand-teal-deep);
+  font-weight: 700;
+}
+
+.contact-social-link:hover {
+  color: var(--brand-teal);
+}
+
+.social-icon {
+  width: 24px;
+  height: 24px;
+  display: inline-flex;
+}
+
+.social-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* Mantém cards de parceiros proporcionais com a inclusão da Diamond */
+@media (min-width: 1025px) {
+  .partners-grid-modern {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 1024px) {
+  .partners-grid-modern {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 680px) {
+  .partners-grid-modern {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* =========================================================
+   V20B - Ajustes finos solicitados pelo usuário
+   - Corrige nome saindo da caixa em Parceiros
+   - Dá mais visibilidade às imagens de fundo na Home e Quem Somos
+   ========================================================= */
+
+/* 1) Parceiros: evitar que nome da empresa saia da caixa */
+.partner-card-modern {
+  overflow: hidden;
+}
+
+.partner-card-head {
+  align-items: flex-start;
+}
+
+.partner-card-head h3 {
+  flex: 1 1 auto;
+  min-width: 0;
+  overflow-wrap: anywhere;
+  word-break: normal;
+}
+
+@media (min-width: 1025px) {
+  .partners-grid-modern {
+    gap: 22px;
+  }
+
+  .partner-logo {
+    width: 110px;
+    height: 50px;
+  }
+
+  .partner-card-head {
+    gap: 14px;
+  }
+
+  .partner-card-head h3 {
+    font-size: 1.02rem;
+    line-height: 1.1;
+  }
+
+  .partner-card-modern p {
+    font-size: .98rem;
+    line-height: 1.55;
+  }
+}
+
+/* 2) Home: deixar imagem de fundo mais visível */
+.hero-bg-material {
+  background:
+    linear-gradient(120deg, rgba(7, 95, 106, .76) 0%, rgba(20, 142, 154, .70) 56%, rgba(248, 175, 86, .22) 100%),
+    url("../img/refino-final/home-capa-maos.jpg") 74% center / cover no-repeat;
+}
+
+.hero-bg-material::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: radial-gradient(circle at 76% 36%, rgba(255,255,255,.12) 0%, rgba(255,255,255,.06) 18%, transparent 38%);
+}
+
+/* 3) Quem Somos: dar mais destaque ao fundo e reposicionar para não cortar a cabeça */
+.page-hero-bg-about {
+  background:
+    linear-gradient(120deg, rgba(7, 95, 106, .78) 0%, rgba(18, 143, 154, .72) 60%, rgba(248,175,86,.24) 100%),
+    url("../img/refino-final/quem-somos-faixa-grupo.jpg") center 18% / cover no-repeat;
+}
+
+.page-hero-bg-about::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(180deg, rgba(255,255,255,.06) 0%, transparent 26%, transparent 100%);
+}
+
+@media (max-width: 900px) {
+  .page-hero-bg-about {
+    background:
+      linear-gradient(120deg, rgba(7, 95, 106, .80) 0%, rgba(18, 143, 154, .74) 60%, rgba(248,175,86,.24) 100%),
+      url("../img/refino-final/quem-somos-faixa-grupo.jpg") center 12% / cover no-repeat;
+  }
+}
+
+
+/* =========================================================
+   V20C - Quem Somos: nova imagem de fundo em destaque
+   ========================================================= */
+.page-hero-bg-about {
+  background:
+    linear-gradient(120deg, rgba(7, 95, 106, .74) 0%, rgba(18, 143, 154, .55) 56%, rgba(248,175,86,.14) 100%),
+    url("../img/refino-final/quem-somos-bg-destaque.jpg") center center / cover no-repeat;
+}
+
+.page-hero-bg-about::before {
+  background: rgba(7,95,106,.04);
+}
+
+.page-hero-bg-about::after {
+  background: linear-gradient(180deg, rgba(255,255,255,.04) 0%, transparent 30%, transparent 100%);
+}
+
+@media (max-width: 760px) {
+  .page-hero-bg-about {
+    background:
+      linear-gradient(120deg, rgba(7, 95, 106, .80) 0%, rgba(18, 143, 154, .66) 62%, rgba(248,175,86,.18) 100%),
+      url("../img/refino-final/quem-somos-bg-destaque.jpg") 64% center / cover no-repeat;
+  }
+}

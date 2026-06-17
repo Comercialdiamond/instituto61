@@ -1,101 +1,170 @@
 // =========================================================
-// Projetos institucionais - Dados editáveis
-// Ajuste textos, categorias, status e fotos conforme a versão oficial.
+// Projetos, ações e eventos - Instituto 61
+// Base visual preservada; conteúdo atualizado com material final.
 // =========================================================
 
 const projetos = [
   {
     titulo: "Meu Caminho",
-    categoria: "educacao",
+    categoria: "programa",
     etiqueta: "Educação e juventude",
+    status: "Programa em parceria",
+    capa: "assets/img/refino-final/meu-caminho-01.jpg",
+    resumo: "Programa em parceria com Instituto CNP Brasil e Programa Jovens de Expressão, voltado a adolescentes do ensino médio público do DF.",
+    descricao: "Há 5 anos participamos do Programa Meu Caminho, em parceria com Instituto CNP Brasil e Programa Jovens de Expressão, cujo objetivo é promover oportunidades e reduzir desigualdades entre adolescentes em situação de vulnerabilidade social, matriculados no ensino médio da rede pública do Distrito Federal. Realizamos psicoterapia individual com os jovens, suporte emocional para as famílias, encontros de psicoeducação, análise de perfil e orientação profissional.",
+    fotos: [
+      "assets/img/refino-final/meu-caminho-01.jpg",
+      "assets/img/refino-final/meu-caminho-02.jpg",
+      "assets/img/refino-final/meu-caminho-03.jpg",
+      "assets/img/refino-final/meu-caminho-04.jpg",
+      "assets/img/refino-final/meu-caminho-05.jpg"
+    ]
+  },
+  {
+    titulo: "PULSAR",
+    categoria: "programa",
+    etiqueta: "Governança preventiva",
+    status: "Programa institucional",
+    capa: "assets/img/refino-final/logo-pulsar-placeholder.svg",
+    resumo: "Programa de governança preventiva escolar e empresarial com análise diagnóstica de dados e planejamento estratégico.",
+    descricao: "O PULSAR é um programa de governança preventiva escolar e empresarial, focado no levantamento, gerenciamento e análise diagnóstica de dados, que possibilitam intervenções, encaminhamentos e planejamento estratégico de ações voltadas para a promoção de saúde integral, através de uma infraestrutura automatizada.",
+    fotos: [
+      "assets/img/refino-final/logo-pulsar-placeholder.svg"
+    ]
+  },
+  {
+    titulo: "ForteMente",
+    categoria: "projeto",
+    etiqueta: "Saúde mental e orientação de vida",
     status: "Projeto institucional",
-    resumo: "Projeto voltado à orientação, desenvolvimento humano e preparação de adolescentes para novas etapas da vida educacional.",
-    descricao: "Iniciativa orientada ao desenvolvimento de jovens, apoio à construção de projeto de vida, educação socioemocional, orientação e preparação para novas etapas da trajetória educacional.",
+    capa: "assets/img/refino-final/logo-fortemente.png",
+    resumo: "Projeto voltado à saúde mental, convivência social e orientação de vida para jovens e crianças.",
+    descricao: "O Projeto ForteMente fundamenta-se na necessidade urgente de fortalecimento das ações voltadas à saúde mental, convivência social e orientação de vida para jovens e crianças. Realizamos encontros de psicoeducação em escolas públicas de Ceilândia/DF, abordando temas como saúde mental, uso excessivo de telas, bullying e cyberbullying. Também aplicamos testes psicológicos para análise de perfil e orientação profissional em estudantes do 3º ano.",
     fotos: [
-      "assets/img/hero-instituto61.png",
-      "assets/img/referencia-missao.png",
-      "assets/img/hero-instituto61-horizontal.png"
+      "assets/img/refino-final/logo-fortemente.png"
     ]
   },
   {
-    titulo: "CENTEA",
-    categoria: "saude",
-    etiqueta: "Saúde e inclusão",
-    status: "Projeto institucional",
-    resumo: "Projeto de construção de um Centro de Atendimento especializado em Transtorno do Espectro Autista.",
-    descricao: "Frente voltada à estruturação de atendimento especializado, inclusão, acolhimento e suporte a pessoas com Transtorno do Espectro Autista e suas famílias.",
+    titulo: "Doação de Alimentos",
+    categoria: "acao",
+    etiqueta: "Ações sociais",
+    status: "Ação institucional",
+    capa: "assets/img/refino-final/acao-doacao-alimentos-01.jpg",
+    resumo: "Arrecadação e entrega de alimentos para pessoas em situação de vulnerabilidade.",
+    descricao: "Ação de arrecadação e destinação de alimentos para pessoas em situação de vulnerabilidade e instituições de acolhimento, fortalecendo cuidado, dignidade e apoio comunitário.",
     fotos: [
-      "assets/img/hero-instituto61-horizontal.png",
-      "assets/img/referencia-visao.png",
-      "assets/img/hero-instituto61.png"
+      "assets/img/refino-final/acao-doacao-alimentos-01.jpg",
+      "assets/img/refino-final/acao-doacao-alimentos-02.jpg",
+      "assets/img/refino-final/acao-doacao-alimentos-03.jpg",
+      "assets/img/refino-final/acao-doacao-alimentos-04.jpg"
     ]
   },
   {
-    titulo: "Florescer",
-    categoria: "protecao",
-    etiqueta: "Proteção social",
-    status: "Projeto institucional",
-    resumo: "Projeto de acolhimento, proteção e empregabilidade de mulheres em situação de violência e vulnerabilidade social.",
-    descricao: "Iniciativa com foco em acolhimento, fortalecimento, autonomia e geração de oportunidades para mulheres em situação de vulnerabilidade.",
+    titulo: "Bazar Beneficente",
+    categoria: "acao",
+    etiqueta: "Ações sociais",
+    status: "Ação institucional",
+    capa: "assets/img/refino-final/acao-bazar-01.jpg",
+    resumo: "Ação beneficente de arrecadação, organização e disponibilização de roupas e itens diversos.",
+    descricao: "Ação beneficente voltada à mobilização solidária, arrecadação de itens e apoio a pessoas e famílias atendidas por iniciativas sociais do Instituto 61.",
     fotos: [
-      "assets/img/referencia-missao.png",
-      "assets/img/referencia-valores.png",
-      "assets/img/hero-instituto61-horizontal.png"
+      "assets/img/refino-final/acao-bazar-01.jpg",
+      "assets/img/refino-final/acao-bazar-02.jpg",
+      "assets/img/refino-final/acao-bazar-03.jpg"
     ]
   },
   {
-    titulo: "Amarelo de Setembro a Setembro",
-    categoria: "saude",
-    etiqueta: "Saúde mental",
-    status: "Projeto institucional",
-    resumo: "Projeto de prevenção ao suicídio e promoção permanente de saúde mental.",
-    descricao: "Ação de conscientização e cuidado contínuo voltada à valorização da vida, saúde emocional e prevenção de situações de risco.",
+    titulo: "Oficina de Segurança Alimentar",
+    categoria: "acao",
+    etiqueta: "Ações educativas",
+    status: "Ação institucional",
+    capa: "assets/img/refino-final/acao-seguranca-alimentar-01.jpg",
+    resumo: "Oficina com foco em segurança alimentar, orientação e práticas de cuidado.",
+    descricao: "Ação educativa voltada à segurança alimentar, orientação prática, cuidado comunitário e fortalecimento de hábitos relacionados à saúde e à dignidade.",
     fotos: [
-      "assets/img/referencia-visao.png",
-      "assets/img/referencia-missao.png",
-      "assets/img/hero-instituto61.png"
+      "assets/img/refino-final/acao-seguranca-alimentar-01.jpg",
+      "assets/img/refino-final/acao-seguranca-alimentar-02.jpg",
+      "assets/img/refino-final/acao-seguranca-alimentar-03.jpg"
     ]
   },
   {
-    titulo: "Motoparque",
-    categoria: "cultura",
-    etiqueta: "Cultura, esporte e lazer",
-    status: "Realizado em edições",
-    resumo: "Projeto voltado ao fortalecimento de eventos para praticantes e apreciadores do motociclismo.",
-    descricao: "Iniciativa que integra lazer, convivência, turismo, esporte, cultura e desenvolvimento econômico local.",
+    titulo: "Encontro de Talentos de Jovens Neurodivergentes",
+    categoria: "acao",
+    etiqueta: "Inclusão e talentos",
+    status: "Ação institucional",
+    capa: "assets/img/refino-final/acao-talentos-01.jpg",
+    resumo: "Encontro voltado à valorização de talentos, inclusão e expressão de jovens neurodivergentes.",
+    descricao: "Ação de valorização, inclusão, convivência e reconhecimento de talentos de jovens neurodivergentes, fortalecendo oportunidades de expressão e pertencimento.",
     fotos: [
-      "assets/img/hero-instituto61.png",
-      "assets/img/referencia-valores.png",
-      "assets/img/referencia-visao.png"
+      "assets/img/refino-final/acao-talentos-01.jpg",
+      "assets/img/refino-final/acao-talentos-02.jpg",
+      "assets/img/refino-final/acao-talentos-03.jpg",
+      "assets/img/refino-final/acao-talentos-04.jpg",
+      "assets/img/refino-final/acao-talentos-05.jpg"
     ]
   },
   {
-    titulo: "Bloco Pais e Filhos",
-    categoria: "cultura",
-    etiqueta: "Cultura e família",
-    status: "Realizado",
-    resumo: "Bloco de rua com proposta familiar, inclusiva e comunitária, unindo tradição e convivência.",
-    descricao: "Projeto cultural que promove a união entre gerações, valorização do carnaval de rua, convivência familiar e integração comunitária.",
+    titulo: "Passeio com Guarda-Mirim",
+    categoria: "acao",
+    etiqueta: "Convivência e juventude",
+    status: "Ação institucional",
+    capa: "assets/img/refino-final/acao-guarda-mirim-01.jpg",
+    resumo: "Ação de convivência, lazer e integração com jovens da Guarda-Mirim.",
+    descricao: "Atividade de convivência e integração voltada a jovens, promovendo lazer, pertencimento, vínculos e experiências coletivas positivas.",
     fotos: [
-      "assets/img/hero-instituto61-horizontal.png",
-      "assets/img/hero-instituto61.png",
-      "assets/img/referencia-valores.png"
+      "assets/img/refino-final/acao-guarda-mirim-01.jpg",
+      "assets/img/refino-final/acao-guarda-mirim-02.jpg",
+      "assets/img/refino-final/acao-guarda-mirim-03.jpg"
     ]
   },
   {
-    titulo: "São João de Águas Claras",
-    categoria: "cultura",
-    etiqueta: "Cultura popular",
-    status: "Evento comunitário",
-    resumo: "Evento tradicional voltado à cultura popular, convivência e fortalecimento comunitário.",
-    descricao: "Iniciativa de valorização das tradições juninas, integração social, cultura popular e lazer comunitário.",
+    titulo: "Apoio ao esporte e atletas",
+    categoria: "acao",
+    etiqueta: "Esporte e desenvolvimento",
+    status: "Ação institucional",
+    capa: "assets/img/refino-final/acao-esporte-01.jpg",
+    resumo: "Apoio a práticas esportivas, atletas e ações de desenvolvimento por meio do esporte.",
+    descricao: "Ação de incentivo ao esporte, valorização de atletas e fortalecimento de práticas que contribuem para disciplina, convivência, saúde e desenvolvimento humano.",
     fotos: [
-      "assets/img/referencia-valores.png",
-      "assets/img/hero-instituto61-horizontal.png",
-      "assets/img/referencia-missao.png"
+      "assets/img/refino-final/acao-esporte-01.jpg",
+      "assets/img/refino-final/acao-esporte-02.jpg"
+    ]
+  },
+  {
+    titulo: "Aniversário do Adolescentro",
+    categoria: "evento",
+    etiqueta: "Eventos",
+    status: "Evento realizado",
+    capa: "assets/img/refino-final/evento-adolescentro-01.jpg",
+    resumo: "Evento de celebração e integração institucional ligado à história do Adolescentro.",
+    descricao: "Evento de celebração, integração e fortalecimento de vínculos com a comunidade atendida, reforçando a memória institucional e o compromisso com cuidado e acolhimento.",
+    fotos: [
+      "assets/img/refino-final/evento-adolescentro-01.jpg",
+      "assets/img/refino-final/evento-adolescentro-02.jpg",
+      "assets/img/refino-final/evento-adolescentro-03.jpg",
+      "assets/img/refino-final/evento-adolescentro-04.jpg",
+      "assets/img/refino-final/evento-adolescentro-05.jpg"
+    ]
+  },
+  {
+    titulo: "Rodeio PBR",
+    categoria: "evento",
+    etiqueta: "Eventos",
+    status: "Evento realizado",
+    capa: "assets/img/refino-final/evento-rodeio-01.jpg",
+    resumo: "Evento institucional com participação e registro de ações vinculadas ao Rodeio PBR.",
+    descricao: "Evento institucional com participação e registro de ações vinculadas ao Rodeio PBR, fortalecendo presença social, convivência e articulação com parceiros.",
+    fotos: [
+      "assets/img/refino-final/evento-rodeio-01.jpg",
+      "assets/img/refino-final/evento-rodeio-02.jpg",
+      "assets/img/refino-final/evento-rodeio-03.jpg",
+      "assets/img/refino-final/evento-rodeio-04.jpg",
+      "assets/img/refino-final/evento-rodeio-05.jpg"
     ]
   }
 ];
+
+let galleryTimer = null;
 
 function renderProjetos(limit = null) {
   const grid = document.getElementById("projetos-grid");
@@ -105,7 +174,8 @@ function renderProjetos(limit = null) {
 
   grid.innerHTML = list.map((p, index) => `
     <article class="card project-card reveal" data-category="${p.categoria}">
-      <div class="project-cover">
+      <div class="project-cover project-cover-with-image">
+        ${p.capa ? `<img class="project-cover-img" src="${p.capa}" alt="${p.titulo}">` : ""}
         <span class="project-tag">${p.etiqueta}</span>
       </div>
       <div class="project-body">
@@ -151,6 +221,7 @@ function openProjectModal(project) {
   const content = document.getElementById("project-modal-body");
   if (!modal || !content) return;
 
+  clearInterval(galleryTimer);
   const fotos = project.fotos && project.fotos.length ? project.fotos : ["assets/img/hero-instituto61.png"];
 
   content.innerHTML = `
@@ -174,13 +245,10 @@ function openProjectModal(project) {
     <div class="project-gallery" data-current="0">
       <div class="project-gallery-head">
         <h3>Fotos do projeto</h3>
-        <div class="gallery-controls">
-          <button type="button" class="gallery-btn" id="gallery-prev" aria-label="Foto anterior">‹</button>
-          <button type="button" class="gallery-btn" id="gallery-next" aria-label="Próxima foto">›</button>
-        </div>
+        <small class="gallery-helper">Carrossel automático • clique na imagem para ampliar</small>
       </div>
 
-      <div class="gallery-frame">
+      <div class="gallery-frame gallery-frame-zoom">
         <img id="gallery-image" src="${fotos[0]}" alt="Foto do projeto ${project.titulo}">
       </div>
 
@@ -217,20 +285,46 @@ function setupGalleryControls(projectTitle) {
     });
   }
 
-  const prev = document.getElementById("gallery-prev");
-  const next = document.getElementById("gallery-next");
-
-  if (prev) prev.addEventListener("click", () => setPhoto(Number(gallery.dataset.current) - 1));
-  if (next) next.addEventListener("click", () => setPhoto(Number(gallery.dataset.current) + 1));
-
   dots.forEach(dot => {
     dot.addEventListener("click", () => setPhoto(Number(dot.dataset.galleryDot)));
   });
+
+  image.addEventListener("click", () => openProjectLightbox(image.src, image.alt));
+
+  if (photos.length > 1) {
+    galleryTimer = setInterval(() => setPhoto(Number(gallery.dataset.current) + 1), 3500);
+  }
+}
+
+function openProjectLightbox(src, alt) {
+  let lightbox = document.getElementById("project-lightbox");
+
+  if (!lightbox) {
+    lightbox = document.createElement("div");
+    lightbox.id = "project-lightbox";
+    lightbox.className = "project-lightbox";
+    lightbox.innerHTML = `
+      <button class="lightbox-close" aria-label="Fechar imagem ampliada">×</button>
+      <img src="" alt="">
+    `;
+    document.body.appendChild(lightbox);
+
+    lightbox.addEventListener("click", (event) => {
+      if (event.target === lightbox || event.target.classList.contains("lightbox-close")) {
+        lightbox.classList.remove("open");
+      }
+    });
+  }
+
+  lightbox.querySelector("img").src = src;
+  lightbox.querySelector("img").alt = alt;
+  lightbox.classList.add("open");
 }
 
 function closeProjectModal() {
   const modal = document.getElementById("project-modal");
   if (modal) modal.classList.remove("open");
+  clearInterval(galleryTimer);
 }
 
 document.addEventListener("click", (event) => {
@@ -239,5 +333,9 @@ document.addEventListener("click", (event) => {
 });
 
 document.addEventListener("keydown", (event) => {
-  if (event.key === "Escape") closeProjectModal();
+  if (event.key === "Escape") {
+    closeProjectModal();
+    const lightbox = document.getElementById("project-lightbox");
+    if (lightbox) lightbox.classList.remove("open");
+  }
 });

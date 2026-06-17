@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="180" viewBox="0 0 520 180">
+  <rect width="520" height="180" rx="26" fill="#e8f4f5"/>
+  <g transform="translate(28 34)">
+    <polygon points="48,0 96,48 48,96 0,48" fill="#f8af56"/>
+    <polygon points="48,17 79,48 48,79 17,48" fill="#ffffff" opacity=".95"/>
+  </g>
+  <text x="150" y="78" font-family="Montserrat, Arial, sans-serif" font-size="38" font-weight="900" fill="#075f6a">DIAMOND</text>
+  <text x="150" y="116" font-family="Montserrat, Arial, sans-serif" font-size="24" font-weight="700" fill="#667085">Corporate</text>
+</svg>

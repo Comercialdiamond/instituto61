@@ -33,6 +33,25 @@ const parceiros = [
     ]
   },
   {
+    id: "diamond",
+    nome: "Diamond Corporate",
+    logo: "assets/img/parceiros/logo-diamond-corporate.svg",
+    descricao: "Parceira em soluções estratégicas, tecnologia e fortalecimento institucional.",
+    textoDetalhe: "Parceria voltada ao fortalecimento institucional do Instituto 61, com apoio em estruturação, comunicação, tecnologia e expansão de iniciativas de impacto social.",
+    projetos: [
+      {
+        nome: "PULSAR",
+        andamento: "Em desenvolvimento e expansão",
+        resumo: "Programa de governança preventiva e saúde integral com apoio estratégico e tecnológico."
+      },
+      {
+        nome: "Apoio institucional",
+        andamento: "Em andamento",
+        resumo: "Apoio à organização, comunicação e estruturação de iniciativas sociais do Instituto 61."
+      }
+    ]
+  },
+  {
     id: "orgaos-publicos",
     nome: "Órgãos públicos e secretarias",
     logo: "assets/img/parceiros/logo-orgaos-publicos.svg",

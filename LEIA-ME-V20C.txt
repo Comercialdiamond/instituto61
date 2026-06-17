@@ -1,0 +1,7 @@
+PACOTE V20C - Ajuste da página Quem Somos
+
+Alterações realizadas:
+- Substituída a imagem de fundo da página Quem Somos pela imagem enviada.
+- Criada uma versão horizontal otimizada para o topo: assets/img/refino-final/quem-somos-bg-destaque.jpg
+- Mantida a base visual da V20B, sem alterar escala global de fontes ou estrutura do site.
+- Ajustado o CSS para deixar a imagem mais visível, preservando o tom verde institucional por cima.
