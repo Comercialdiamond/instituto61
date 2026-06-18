@@ -1,13 +1,11 @@
 // =========================================================
-// Parceiros institucionais - Dados editáveis
-// Altere nomes, logos, descrições, projetos e andamento conforme necessário.
+// Parceiros institucionais - Instituto 61
 // =========================================================
-
 const parceiros = [
   {
     id: "cnp",
     nome: "Instituto CNP Brasil",
-    logo: "assets/img/parceiros/logo-cnp-brasil.svg",
+    logo: "assets/img/parceiros/logo-cnp-brasil.png",
     descricao: "Parceiro em projeto educacional e de desenvolvimento de adolescentes.",
     textoDetalhe: "Parceria voltada ao fortalecimento de iniciativas educacionais, desenvolvimento humano e ampliação de oportunidades para adolescentes e jovens.",
     projetos: [
@@ -19,23 +17,9 @@ const parceiros = [
     ]
   },
   {
-    id: "caixa",
-    nome: "Caixa Seguradora",
-    logo: "assets/img/parceiros/logo-caixa-seguradora.svg",
-    descricao: "Apoiadora/parceira em iniciativa voltada ao novo Ensino Médio e preparação de adolescentes.",
-    textoDetalhe: "Apoio institucional relacionado a ações de educação, orientação e preparação de adolescentes para desafios escolares, sociais e profissionais.",
-    projetos: [
-      {
-        nome: "Meu Caminho",
-        andamento: "Em estruturação/execução institucional",
-        resumo: "Ação voltada à preparação de adolescentes, construção de perspectivas e desenvolvimento socioeducacional."
-      }
-    ]
-  },
-  {
     id: "diamond",
     nome: "Diamond Corporate",
-    logo: "assets/img/parceiros/logo-diamond-corporate.svg",
+    logo: "assets/img/parceiros/logo-diamond-corporate-custom.jpg",
     descricao: "Parceira em soluções estratégicas, tecnologia e fortalecimento institucional.",
     textoDetalhe: "Parceria voltada ao fortalecimento institucional do Instituto 61, com apoio em estruturação, comunicação, tecnologia e expansão de iniciativas de impacto social.",
     projetos: [
@@ -52,21 +36,21 @@ const parceiros = [
     ]
   },
   {
-    id: "orgaos-publicos",
-    nome: "Órgãos públicos e secretarias",
-    logo: "assets/img/parceiros/logo-orgaos-publicos.svg",
-    descricao: "Espaço para listar parcerias formais, termos de fomento, colaboração e execução de eventos.",
-    textoDetalhe: "Relações institucionais voltadas à execução de projetos, ações comunitárias, eventos, termos de colaboração e iniciativas de interesse público.",
+    id: "gdf",
+    nome: "Governo do Distrito Federal",
+    logo: "assets/img/parceiros/logo-gdf.png",
+    descricao: "Parceiro institucional em ações públicas, cooperação social e desenvolvimento de iniciativas de impacto coletivo.",
+    textoDetalhe: "Parceria institucional voltada à cooperação com o poder público para viabilização de projetos, ações comunitárias, iniciativas de interesse social e fortalecimento do impacto territorial.",
     projetos: [
       {
-        nome: "Eventos comunitários",
-        andamento: "Conforme termos e parcerias vigentes",
-        resumo: "Ações culturais, comunitárias, sociais e de desenvolvimento local executadas em cooperação com instituições públicas."
+        nome: "Projetos sociais e comunitários",
+        andamento: "Conforme parcerias e articulações institucionais",
+        resumo: "Iniciativas de interesse público desenvolvidas em cooperação com foco em cuidado, desenvolvimento humano e fortalecimento de comunidades."
       },
       {
-        nome: "Projetos sociais e culturais",
-        andamento: "Sob demanda institucional",
-        resumo: "Iniciativas organizadas conforme planejamento, capacidade operacional e objetivos de cada parceria."
+        nome: "Eventos e ações territoriais",
+        andamento: "Em articulação",
+        resumo: "Ações coletivas, comunitárias e institucionais desenvolvidas conforme cronogramas, agendas e oportunidades de parceria."
       }
     ]
   }
@@ -77,15 +61,12 @@ function renderParceiros() {
   if (!grid) return;
 
   grid.innerHTML = parceiros.map(parceiro => `
-    <article class="card partner-card partner-card-modern reveal">
-      <div>
-        <div class="partner-card-head">
-          <img class="partner-logo" src="${parceiro.logo}" alt="Logo ${parceiro.nome}">
-          <h3>${parceiro.nome}</h3>
-        </div>
-        <p>${parceiro.descricao}</p>
+    <article class="card partner-card-v22 reveal">
+      <div class="partner-logo-box-v22">
+        <img src="${parceiro.logo}" alt="Logo ${parceiro.nome}">
       </div>
-
+      <h3>${parceiro.nome}</h3>
+      <p>${parceiro.descricao}</p>
       <a class="text-link" href="parceiro-detalhes.html?parceiro=${parceiro.id}">Ver detalhes →</a>
     </article>
   `).join("");
@@ -106,17 +87,16 @@ function renderParceiroDetalhes() {
 
   if (heading) {
     heading.innerHTML = `
-      <img src="${parceiro.logo}" alt="Logo ${parceiro.nome}">
-      <div>
-        <h1 class="title-xl page-title-centered">${parceiro.nome}</h1>
-        <p class="lead page-lead-justified">${parceiro.textoDetalhe}</p>
-      </div>
+      <h1 class="title-xl page-title-centered">${parceiro.nome}</h1>
+      <p class="lead page-lead-justified">${parceiro.textoDetalhe}</p>
     `;
   }
 
   if (card) {
     card.innerHTML = `
-      <img class="partner-detail-logo" src="${parceiro.logo}" alt="Logo ${parceiro.nome}">
+      <div class="partner-detail-logo-box-v22">
+        <img src="${parceiro.logo}" alt="Logo ${parceiro.nome}">
+      </div>
       <h3>${parceiro.nome}</h3>
       <p>${parceiro.descricao}</p>
     `;
@@ -124,8 +104,8 @@ function renderParceiroDetalhes() {
 
   if (list) {
     list.innerHTML = parceiro.projetos.map(projeto => `
-      <article class="partner-project-item">
-        <div class="project-status-pill">${projeto.andamento}</div>
+      <article class="card partner-project-item-v22">
+        <div class="eyebrow">${projeto.andamento}</div>
         <h3>${projeto.nome}</h3>
         <p>${projeto.resumo}</p>
       </article>

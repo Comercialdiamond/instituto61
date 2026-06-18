@@ -25,11 +25,11 @@ const projetos = [
     categoria: "programa",
     etiqueta: "Governança preventiva",
     status: "Programa institucional",
-    capa: "assets/img/refino-final/logo-pulsar-placeholder.svg",
+    capa: "assets/img/refino-final/logo-pulsar-programa-custom.png",
     resumo: "Programa de governança preventiva escolar e empresarial com análise diagnóstica de dados e planejamento estratégico.",
     descricao: "O PULSAR é um programa de governança preventiva escolar e empresarial, focado no levantamento, gerenciamento e análise diagnóstica de dados, que possibilitam intervenções, encaminhamentos e planejamento estratégico de ações voltadas para a promoção de saúde integral, através de uma infraestrutura automatizada.",
     fotos: [
-      "assets/img/refino-final/logo-pulsar-placeholder.svg"
+      "assets/img/refino-final/logo-pulsar-programa-custom.png"
     ]
   },
   {

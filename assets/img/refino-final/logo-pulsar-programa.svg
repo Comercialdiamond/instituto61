@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="780" viewBox="0 0 1200 780" role="img" aria-labelledby="title desc">
+  <title id="title">Logo PULSAR</title>
+  <desc id="desc">Programa PULSAR - Governança preventiva e saúde integral</desc>
+  <rect width="1200" height="780" rx="42" fill="#178692"/>
+  <circle cx="970" cy="130" r="120" fill="#D8AA4C"/>
+  <circle cx="190" cy="200" r="146" fill="#E8F1F2" opacity="0.98"/>
+  <text x="104" y="270" font-family="Montserrat, Arial, sans-serif" font-size="150" font-weight="900" fill="#FFFFFF">PULSAR</text>
+  <text x="110" y="360" font-family="Montserrat, Arial, sans-serif" font-size="48" font-weight="700" fill="#FFFFFF">Governança preventiva e saúde integral</text>
+  <rect x="110" y="455" width="420" height="92" rx="46" fill="#F4F7F7"/>
+  <text x="140" y="514" font-family="Montserrat, Arial, sans-serif" font-size="42" font-weight="800" fill="#0C6973">Governança preventiva</text>
+</svg>

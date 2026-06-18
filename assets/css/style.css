@@ -2447,3 +2447,423 @@ textarea {
       url("../img/refino-final/quem-somos-bg-destaque.jpg") 64% center / cover no-repeat;
   }
 }
+
+
+/* =========================================================
+   V22 - Correção completa: assets/css preservado + ajustes finais
+   ========================================================= */
+
+/* Quem Somos: texto à esquerda, foto sem duplicação e pessoas mais visíveis */
+.page-hero-bg-about {
+  position: relative;
+  overflow: hidden;
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+  background:
+    linear-gradient(90deg, rgba(11, 104, 111, 0.95) 0%, rgba(18, 130, 139, 0.92) 42%, rgba(35, 155, 165, 0.55) 68%, rgba(35, 155, 165, 0.16) 100%),
+    url("../img/refino-final/quem-somos-bg-destaque.jpg") right center / auto 100% no-repeat,
+    #167f89;
+}
+
+.page-hero-bg-about::before,
+.page-hero-bg-about::after {
+  display: none !important;
+}
+
+.page-hero-bg-about .container {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.page-hero-bg-about .page-title-centered {
+  text-align: left;
+  margin: 0;
+  max-width: 900px;
+}
+
+.page-hero-bg-about .page-lead-justified {
+  text-align: left;
+  margin: 26px 0 0;
+  max-width: 860px;
+}
+
+@media (max-width: 1200px) {
+  .page-hero-bg-about {
+    background:
+      linear-gradient(90deg, rgba(11, 104, 111, 0.93) 0%, rgba(18, 130, 139, 0.90) 52%, rgba(18, 130, 139, 0.64) 100%),
+      url("../img/refino-final/quem-somos-bg-destaque.jpg") 86% center / auto 100% no-repeat,
+      #167f89;
+  }
+}
+
+@media (max-width: 900px) {
+  .page-hero-bg-about {
+    min-height: 560px;
+    background:
+      linear-gradient(180deg, rgba(11, 104, 111, 0.82) 0%, rgba(18, 130, 139, 0.82) 100%),
+      url("../img/refino-final/quem-somos-bg-destaque.jpg") 78% center / cover no-repeat,
+      #167f89;
+  }
+}
+
+/* Parceiros: logos reais no topo, nome abaixo menor, 3 cards */
+.partners-grid-v22 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  margin-top: 44px;
+  align-items: stretch;
+}
+
+.partner-card-v22 {
+  min-height: 330px;
+  display: flex;
+  flex-direction: column;
+}
+
+.partner-logo-box-v22 {
+  width: 100%;
+  min-height: 96px;
+  padding: 18px;
+  border-radius: 18px;
+  background: #f0f7f8;
+  border: 1px solid rgba(7, 95, 106, .08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+
+.partner-logo-box-v22 img {
+  max-width: 100%;
+  max-height: 64px;
+  object-fit: contain;
+}
+
+.partner-card-v22 h3 {
+  font-size: 1.08rem;
+  line-height: 1.2;
+  margin-bottom: 14px;
+  color: var(--brand-teal-deep);
+}
+
+.partner-card-v22 p {
+  flex: 1;
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+.partner-detail-logo-box-v22 {
+  width: 100%;
+  padding: 18px;
+  border-radius: 18px;
+  background: #f0f7f8;
+  border: 1px solid rgba(7, 95, 106, .08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+
+.partner-detail-logo-box-v22 img {
+  max-width: 240px;
+  max-height: 110px;
+  object-fit: contain;
+}
+
+.partner-project-item-v22 {
+  margin-top: 18px;
+}
+
+.partner-project-item-v22 h3 {
+  margin-top: 10px;
+}
+
+@media (max-width: 1000px) {
+  .partners-grid-v22 {
+    grid-template-columns: 1fr;
+  }
+
+  .partner-card-v22 {
+    min-height: auto;
+  }
+}
+
+/* PULSAR nos projetos: SVG/arte preservando proporção */
+.project-cover-with-image img[src$=".svg"],
+.project-card-media img[src$=".svg"] {
+  object-fit: contain !important;
+  padding: 18px;
+  background: #178692;
+}
+
+
+/* ===== V22E - Ajuste final do banner Quem Somos ===== */
+.page-hero-bg-about {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(90deg, #0f7a84 0%, #2a98a2 58%, #7bb7bd 100%);
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+}
+
+.page-hero-bg-about::before,
+.page-hero-bg-about::after {
+  content: none !important;
+  display: none !important;
+}
+
+.page-hero-bg-about .about-hero-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(320px, 0.8fr);
+  align-items: center;
+  gap: clamp(20px, 3vw, 44px);
+  width: 100%;
+}
+
+.page-hero-bg-about .about-hero-copy {
+  padding-left: clamp(26px, 4vw, 72px);
+  padding-right: 0;
+}
+
+.page-hero-bg-about .page-title-centered {
+  text-align: left;
+  max-width: 900px;
+  margin: 0;
+}
+
+.page-hero-bg-about .page-lead-justified {
+  text-align: left;
+  max-width: 820px;
+  margin: 26px 0 0;
+}
+
+.page-hero-bg-about .about-hero-photo-wrap {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  height: 100%;
+  padding-right: clamp(8px, 1.6vw, 24px);
+}
+
+.page-hero-bg-about .about-hero-photo {
+  display: block;
+  width: min(100%, 470px);
+  max-height: 470px;
+  object-fit: contain;
+  object-position: center bottom;
+  filter: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+@media (max-width: 1100px) {
+  .page-hero-bg-about .about-hero-layout {
+    grid-template-columns: minmax(0, 1fr) minmax(280px, 0.72fr);
+  }
+  .page-hero-bg-about .about-hero-copy {
+    padding-left: clamp(22px, 3vw, 44px);
+  }
+  .page-hero-bg-about .about-hero-photo {
+    width: min(100%, 390px);
+    max-height: 430px;
+  }
+}
+
+@media (max-width: 860px) {
+  .page-hero-bg-about {
+    min-height: auto;
+    padding: 40px 0 0;
+  }
+  .page-hero-bg-about .about-hero-layout {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  .page-hero-bg-about .about-hero-copy {
+    padding: 0 18px;
+  }
+  .page-hero-bg-about .page-title-centered,
+  .page-hero-bg-about .page-lead-justified {
+    text-align: center;
+    max-width: none;
+  }
+  .page-hero-bg-about .page-lead-justified {
+    margin-top: 20px;
+  }
+  .page-hero-bg-about .about-hero-photo-wrap {
+    justify-content: center;
+    padding-right: 0;
+  }
+  .page-hero-bg-about .about-hero-photo {
+    width: min(92vw, 430px);
+    max-height: none;
+  }
+}
+
+/* =========================================================
+   V24 - Projeto completo consolidado
+   ========================================================= */
+
+.page-hero-banner-only {
+  background: transparent !important;
+  padding: 110px 0 0 !important;
+}
+.page-hero-banner-only .container {
+  max-width: 100% !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+.hero-banner-render {
+  width: 100% !important;
+  display: block;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+@media (max-width: 860px) {
+  .page-hero-banner-only {
+    padding: 96px 0 0 !important;
+  }
+}
+
+.hero-home-compact {
+  min-height: 64vh;
+  padding: 128px 0 54px;
+}
+.hero-home-compact .hero-grid-single {
+  min-height: 44vh;
+}
+.hero-home-compact .hero-title-no-break {
+  max-width: 1080px;
+  font-size: clamp(2.4rem, 4.6vw, 4.15rem);
+}
+.hero-home-compact .hero-lead-wide {
+  max-width: 900px;
+  text-align: center;
+  font-size: clamp(1rem, 1.35vw, 1.14rem);
+}
+.home-section-merged {
+  background: linear-gradient(180deg, #ffffff 0%, #f5fafb 100%);
+}
+.home-areas-merged {
+  margin-top: 38px;
+}
+.home-merged-action {
+  margin-top: 32px;
+}
+.testimonials-section {
+  background: #ffffff;
+}
+.testimonials-head {
+  max-width: 980px;
+  margin: 0 auto 38px;
+}
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  align-items: stretch;
+}
+.testimonial-card {
+  position: relative;
+  border-radius: 28px;
+  padding: 30px 28px;
+  border: 1px solid var(--line);
+  box-shadow: 0 18px 44px rgba(7,95,106,.08);
+  height: 100%;
+}
+.testimonial-card::before {
+  content: '“';
+  position: absolute;
+  top: 18px;
+  left: 22px;
+  font-size: 3.4rem;
+  line-height: 1;
+  color: rgba(7,95,106,.12);
+  font-weight: 900;
+}
+.testimonial-card-soft {
+  background: #f8fbfc;
+}
+.testimonial-card-highlight {
+  background: linear-gradient(160deg, var(--brand-teal) 0%, var(--brand-teal-deep) 100%);
+  border-color: transparent;
+}
+.testimonial-card-highlight::before {
+  color: rgba(255,255,255,.12);
+}
+.testimonial-text {
+  position: relative;
+  z-index: 1;
+  margin: 12px 0 24px;
+  color: var(--muted);
+  line-height: 1.85;
+  font-size: 1.02rem;
+}
+.testimonial-card-highlight .testimonial-text,
+.testimonial-card-highlight .testimonial-author {
+  color: white;
+}
+.testimonial-author {
+  position: relative;
+  z-index: 1;
+  font-size: 1.18rem;
+  font-weight: 900;
+  color: var(--brand-teal-deep);
+}
+.principle-cards-refined .principle-card {
+  min-height: 380px;
+}
+.principle-card-light {
+  background: #ffffff;
+}
+.principle-card-light h3,
+.principle-card-light p {
+  color: inherit;
+}
+.principle-card-green {
+  background: linear-gradient(165deg, var(--brand-teal) 0%, var(--brand-teal-deep) 100%);
+  color: white;
+}
+.principle-card-green h3,
+.principle-card-green p {
+  color: white;
+}
+.principle-card-green p {
+  color: rgba(255,255,255,.9);
+}
+@media (max-width: 1100px) {
+  .testimonials-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .hero-home-compact {
+    min-height: 58vh;
+  }
+}
+@media (max-width: 860px) {
+  .hero-home-compact {
+    min-height: auto;
+    padding: 120px 0 48px;
+  }
+  .hero-home-compact .hero-grid-single {
+    min-height: auto;
+  }
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 640px) {
+  .hero-home-compact .hero-title-no-break {
+    font-size: clamp(2rem, 10vw, 3.05rem);
+  }
+  .testimonial-card {
+    padding: 26px 20px;
+    border-radius: 22px;
+  }
+  .testimonial-text {
+    font-size: .98rem;
+    line-height: 1.75;
+  }
+}
