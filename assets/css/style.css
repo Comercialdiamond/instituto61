@@ -2844,3 +2844,36 @@ textarea {
     line-height: 1.72;
   }
 }
+
+
+/* =========================================================
+   V31 - Parceiros: ajuste de fonte para evitar quebra de palavra
+   ========================================================= */
+
+.partner-card-v22 h3 {
+  font-size: clamp(1.02rem, 1.08vw, 1.18rem) !important;
+  line-height: 1.15 !important;
+  letter-spacing: -0.02em;
+  overflow-wrap: normal !important;
+  word-break: normal !important;
+  hyphens: none !important;
+  text-wrap: balance;
+}
+
+.partner-card-v22 {
+  padding-left: 28px;
+  padding-right: 28px;
+}
+
+@media (max-width: 1180px) {
+  .partner-card-v22 h3 {
+    font-size: 1.02rem !important;
+  }
+}
+
+@media (max-width: 760px) {
+  .partner-card-v22 h3 {
+    font-size: 1.18rem !important;
+    line-height: 1.18 !important;
+  }
+}
