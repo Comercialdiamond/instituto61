@@ -1,0 +1,25 @@
+PACOTE V22 CORRIGIDO
+
+A versão v21 anterior ficou desformatada porque o ZIP não levou a pasta assets/css completa.
+Esta versão foi reconstruída usando a V20C completa como base e preserva toda a estrutura do site.
+
+Ajustes aplicados:
+1. Página Quem Somos:
+   - Texto do hero alinhado à esquerda.
+   - Foto mais visível.
+   - Removido efeito duplicado/blur de pessoas no fundo.
+
+2. Página Projetos:
+   - PULSAR usando logo/arte própria em SVG no card e detalhes.
+
+3. Página Parceiros:
+   - Removida Caixa Seguradora.
+   - Incluída Diamond Corporate.
+   - Substituído “Órgãos públicos e secretarias” por Governo do Distrito Federal.
+   - Logos reais enviadas pelo usuário usadas para CNP Brasil e GDF.
+   - Nome abaixo da logo, com tamanho menor.
+
+4. Cache busting:
+   - CSS e JS com ?v=22 nas páginas principais.
+
+Suba a estrutura completa no GitHub, preservando a pasta assets.

@@ -1,0 +1,15 @@
+Projeto completo do site Instituto 61 - versão v24
+
+Conteúdo consolidado:
+- Página inicial com depoimentos
+- Página Quem Somos com o banner integrado mais recente
+- Projetos com logo PULSAR
+- Parceiros com logos CNP, Diamond e GDF
+- Doação, Contato e Transparência
+- Assets completos: CSS, JS, imagens e documentos
+
+Para publicar no GitHub Pages:
+1. Extraia o ZIP.
+2. Envie todos os arquivos e pastas para a raiz do repositório.
+3. Garanta que index.html fique na raiz.
+4. Aguarde alguns minutos e atualize a página com Ctrl + F5.
