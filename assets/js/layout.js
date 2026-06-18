@@ -15,7 +15,7 @@ const pages = [
 // IMPORTANTE:
 // Substitua abaixo pelo número oficial do WhatsApp no formato internacional.
 // Exemplo para Brasília: 5561999999999
-const WHATSAPP_NUMBER = "5561000000000";
+const WHATSAPP_NUMBER = "5561982206222";
 const WHATSAPP_MESSAGE = encodeURIComponent("Olá, Instituto 61! Gostaria de mais informações.");
 
 function currentPage() {
