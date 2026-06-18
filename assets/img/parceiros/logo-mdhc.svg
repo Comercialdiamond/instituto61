@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="180" viewBox="0 0 520 180" role="img" aria-label="MDHC Governo Federal">
+  <rect width="520" height="180" rx="28" fill="#e8f5f4"/>
+  <circle cx="74" cy="90" r="28" fill="#f8aa4b"/>
+  <circle cx="74" cy="90" r="16" fill="#0f7a84"/>
+  <text x="124" y="74" font-family="Montserrat, Arial, sans-serif" font-size="34" font-weight="900" fill="#075f6a">MDHC</text>
+  <text x="124" y="112" font-family="Montserrat, Arial, sans-serif" font-size="24" font-weight="800" fill="#0f7a84">Governo Federal</text>
+  <text x="124" y="142" font-family="Montserrat, Arial, sans-serif" font-size="17" font-weight="700" fill="#5e6a7d">Direitos Humanos e Cidadania</text>
+</svg>

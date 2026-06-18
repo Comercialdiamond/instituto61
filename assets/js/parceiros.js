@@ -1,5 +1,6 @@
 // =========================================================
 // Parceiros institucionais - Instituto 61
+// Atualização v30
 // =========================================================
 const parceiros = [
   {
@@ -13,6 +14,39 @@ const parceiros = [
         nome: "Meu Caminho",
         andamento: "Projeto institucional",
         resumo: "Orientação, desenvolvimento humano, projeto de vida e preparação de adolescentes para novas etapas da trajetória educacional."
+      }
+    ]
+  },
+  {
+    id: "ministerio-direitos-humanos",
+    nome: "Ministério dos Direitos Humanos e Cidadania",
+    logo: "assets/img/parceiros/logo-governo-federal-mdhc.png",
+    descricao: "Parceiro institucional vinculado a iniciativas de direitos humanos, cidadania, proteção social e desenvolvimento humano.",
+    textoDetalhe: "Parceria institucional com o Ministério dos Direitos Humanos e Cidadania, voltada ao fortalecimento de ações sociais, proteção de direitos, cidadania e projetos de impacto coletivo.",
+    projetos: [
+      {
+        nome: "Ações institucionais e sociais",
+        andamento: "Em andamento",
+        resumo: "Iniciativas desenvolvidas em cooperação institucional, com foco em cidadania, proteção social, cuidado e desenvolvimento humano."
+      },
+      {
+        nome: "Termos de fomento",
+        andamento: "Conforme instrumentos firmados",
+        resumo: "Projetos e ações executados mediante instrumentos de parceria, conforme documentos publicados na área de Transparência."
+      }
+    ]
+  },
+  {
+    id: "secretaria-educacao-df",
+    nome: "Secretaria de Educação do Distrito Federal",
+    logo: "assets/img/parceiros/logo-secretaria-educacao-df.png",
+    descricao: "Parceira em ações educacionais, formação humana, juventude, inclusão e fortalecimento de oportunidades.",
+    textoDetalhe: "Parceria voltada à promoção de iniciativas educacionais, ações formativas, apoio a jovens, desenvolvimento humano e fortalecimento de oportunidades no território.",
+    projetos: [
+      {
+        nome: "Educação, juventude e desenvolvimento",
+        andamento: "Em articulação",
+        resumo: "Ações voltadas à educação, orientação, desenvolvimento socioemocional, projeto de vida e fortalecimento de vínculos."
       }
     ]
   },
@@ -32,25 +66,6 @@ const parceiros = [
         nome: "Apoio institucional",
         andamento: "Em andamento",
         resumo: "Apoio à organização, comunicação e estruturação de iniciativas sociais do Instituto 61."
-      }
-    ]
-  },
-  {
-    id: "gdf",
-    nome: "Governo do Distrito Federal",
-    logo: "assets/img/parceiros/logo-gdf.png",
-    descricao: "Parceiro institucional em ações públicas, cooperação social e desenvolvimento de iniciativas de impacto coletivo.",
-    textoDetalhe: "Parceria institucional voltada à cooperação com o poder público para viabilização de projetos, ações comunitárias, iniciativas de interesse social e fortalecimento do impacto territorial.",
-    projetos: [
-      {
-        nome: "Projetos sociais e comunitários",
-        andamento: "Conforme parcerias e articulações institucionais",
-        resumo: "Iniciativas de interesse público desenvolvidas em cooperação com foco em cuidado, desenvolvimento humano e fortalecimento de comunidades."
-      },
-      {
-        nome: "Eventos e ações territoriais",
-        andamento: "Em articulação",
-        resumo: "Ações coletivas, comunitárias e institucionais desenvolvidas conforme cronogramas, agendas e oportunidades de parceria."
       }
     ]
   }
