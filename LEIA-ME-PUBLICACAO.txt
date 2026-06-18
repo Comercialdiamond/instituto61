@@ -1,15 +1,15 @@
-Projeto completo do site Instituto 61 - versão v24
+Projeto completo do site Instituto 61 - versão v30
 
-Conteúdo consolidado:
-- Página inicial com depoimentos
-- Página Quem Somos com o banner integrado mais recente
-- Projetos com logo PULSAR
-- Parceiros com logos CNP, Diamond e GDF
-- Doação, Contato e Transparência
-- Assets completos: CSS, JS, imagens e documentos
+Ajustes desta versão:
+- Correção da seção de depoimentos da página inicial.
+- Parceiro atualizado para Ministério dos Direitos Humanos e Cidadania.
+- Inserida logo do Governo Federal enviada.
+- Inserida logo da Secretaria de Educação do Distrito Federal enviada.
+- Página Transparência mantida apenas com Estatuto Social e Termos de Fomento.
+- Cache bust atualizado para v30.
 
-Para publicar no GitHub Pages:
+Publicação:
 1. Extraia o ZIP.
-2. Envie todos os arquivos e pastas para a raiz do repositório.
+2. Envie todos os arquivos e pastas para a raiz do repositório GitHub.
 3. Garanta que index.html fique na raiz.
-4. Aguarde alguns minutos e atualize a página com Ctrl + F5.
+4. Após subir, atualize com Ctrl + F5 ou teste em aba anônima.

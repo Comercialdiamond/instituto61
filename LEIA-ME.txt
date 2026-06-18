@@ -1,18 +1,15 @@
-AJUSTE V17 - HOME + DOAÇÃO
+Patch Instituto 61 - Parceiros e Transparência v28
 
-Substitua estes arquivos na sua pasta atual:
+Substitua/envie estes arquivos no GitHub:
 
-1) index.html
-2) doacao.html
-3) assets/css/style.css
-4) assets/js/main.js
-5) assets/js/layout.js
-6) assets/img/pix-qrcode-instituto61.png
+1) parceiros.html
+2) parceiro-detalhes.html
+3) transparencia.html
+4) assets/js/parceiros.js
+5) assets/img/parceiros/logo-mdhc.svg
+6) assets/img/parceiros/logo-secretaria-educacao.svg
 
-O que foi corrigido:
-- Na página Doação, o título ficou no padrão visual do print enviado: grande, centralizado e proporcional.
-- A área Pix continua chamativa, com QR Code, dados e cards de impacto.
-- Na Home, removi o 'visible' fixo das seções para restaurar o efeito de movimento/reveal ao rolar a página.
-
-Lembrete: em assets/js/layout.js, trocar o número do WhatsApp em:
-const WHATSAPP_NUMBER = "5561000000000";
+Alterações:
+- Parceiros: Instituto CNP Brasil, MDHC/Governo Federal, Secretaria de Educação e Diamond Corporate.
+- Transparência: mantendo apenas Estatuto Social e Termos de Fomento.
+- Cache bust aplicado para evitar que o navegador carregue JS/CSS antigo.
